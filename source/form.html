@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Кэт энерджи: Подбор программы</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="header__wrapper">
+        <div class="header__top">
+          <img src="" alt="" class="header__logo">
+          <h1 class="header__title">
+            <b>Cat</b> energy</h1>
+          <button class="header__burger" type="button"></button>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__menu">
+            <li class="header__menu-item">
+              <a href="index.html" class="header__menu-link">Главная</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="catalog.html" class="header__menu-link">Каталог продукции</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="form.html" class="header__menu-link">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="title-block">
+      <div class="container">
+        <h1 class="title-block__title">Подбор программы</h1>
+        <p class="title-block__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+      </div>
+    </section>
+
+    <section class="selection">
+      <div class="container">
+        <form action="https://echo.htmlacademy.ru" class="selection__form fields" method="get">
+          <div class="fields__wrapper">
+            <div class="fields__set fields__set--personal">
+              <div class="fields__block">
+                <label for="catname" class="fields__label">Имя:*</label>
+                <input type="text" class="fields__textfield" id="catname" name="catname" placeholder="Барсик">
+              </div>
+              <div class="fields__block">
+                <label for="weight" class="fields__label">Вес (кг):*</label>
+                <input type="text" class="fields__textfield" id="weight" name="weight" placeholder="7">
+              </div>
+              <div class="fields__block">
+                <label for="age" class="fields__label">Возраст (лет):</label>
+                <input type="text" class="fields__textfield" id="age" name="age" placeholder="7">
+              </div>
+            </div>
+            <div class="fields__set fields__set--program">
+              <ul class="fields__list programs-list">
+                <li class="programs-list__item">
+                  <input type="radio" class="programs-list__input" name="program" value="slim" id="slim">
+                  <label for="slim" class="programs-list__label">Похудение</label>
+                </li>
+                <li class="programs-list__item">
+                  <input type="radio" class="programs-list__input" name="program" value="mass" id="mass">
+                  <label for="mass" class="programs-list__label">Набор массы</label>
+                </li>
+                <li class="programs-list__item">
+                  <input type="radio" class="programs-list__input" name="program" value="advice" id="advice">
+                  <label for="advice" class="programs-list__label">Не знаю (нужен ваш совет)</label>
+                </li>
+              </ul>
+            </div>
+            <div class="fields__set fields__set--contacts">
+              <h2 class="fields__title">Контактные данные (владельца кота)</h2>
+              <div class="fields__block">
+                <label for="email" class="fields__label">E-mail:*</label>
+                <input type="text" class="fields__textfield" id="email" name="email" placeholder="kuklachev@gmail.com">
+                <img src="" alt="" class="fields__contact-icon">
+              </div>
+              <div class="fields__block">
+                <label for="phone" class="fields__label">Телефон:*</label>
+                <input type="text" class="fields__textfield" id="phone" name="phone" placeholder="8 (960) 900-60-90">
+                <img src="" alt="" class="fields__contact-icon">
+              </div>
+            </div>
+            <div class="fields__set fields__set--descr">
+              <h2 class="fields__title">Комментарий</h2>
+              <textarea class="fields__textarea" name="" id="">Расскажите обо всех повадках кота</textarea>
+            </div>
+            <div class="fields__set fields__set--add">
+              <ul class="fields__list add-list">
+                <li class="add-list__item">
+                  <input type="checkbox" class="add-list__input" name="sweetener" id="sweetener">
+                  <label for="sweetener" class="add-list__label">Сахарозаменитель</label>
+                </li>
+                <li class="add-list__item">
+                  <input type="checkbox" class="add-list__input" name="water" id="water">
+                  <label for="water" class="add-list__label">Питьевая вода</label>
+                </li>
+                <li class="add-list__item">
+                  <input type="checkbox" class="add-list__input" name="milk" id="milk">
+                  <label for="milk" class="add-list__label">Молоко</label>
+                </li>
+                <li class="add-list__item">
+                  <input type="checkbox" class="add-list__input" name="vitamins" id="vitamins">
+                  <label for="vitamins" class="add-list__label">Витамины</label>
+                </li>
+              </ul>
+            </div>
+            <div class="fields__button-block">
+              <button class="fields__button button" type="submit">Отправить заявку</button>
+              <small class="fields__note">* — Обязательные поля</small>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="cooperation">
+      <div class="container">
+        <div class="cooperation__wrapper">
+          <h2 class="cooperation__title">Приглашаем к сотрудничеству дилеров!</h2>
+          <p class="cooperation__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="map">
+      <div class="map__inner" id="map"></div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__wrapper">
+        <div class="footer__block footer__block--title">
+          <h2 class="footer__title">Cat energy</h2>
+        </div>
+        <div class="footer__block footer__block--social">
+          <ul class="footer__list social-list">
+            <li class="social-list__item">
+              <a href="" class="social-list__link">
+                <svg class="social-list__icon">
+                  <use xlink:href=""></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a href="" class="social-list__link">
+                <svg class="social-list__icon">
+                  <use xlink:href=""></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a href="" class="social-list__link">
+                <svg class="social-list__icon">
+                  <use xlink:href=""></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__block footer__block--copyright">
+          <h3 class="footer__developer">HTML Academy</h3>
+          <svg class="footer__developer-icon">
+            <use xlink:href="#"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -12,7 +12,7 @@
 }
 
 .demo__text {
-  font-family: "Arial";
+  font-family: "Arial", sans-serif;
   margin-top: 0;
   margin-bottom: 28px;
 }
@@ -59,7 +59,7 @@
 }
 
 .demo__stats-subtitle {
-  font-family: "Arial";
+  font-family: "Arial", sans-serif;
   position: absolute;
   left: 0;
   right: 0;
@@ -114,12 +114,12 @@
   &--after {
     .demo__image-wrapper {
       transform: translateX(-50%);
-      transition: 0.5s;
+      transition: 0.5s ease-out;
     }
 
     .demo__progress-toggle {
       transform: translateX(100%);
-      transition: 0.5s;
+      transition: 0.5s ease-out;
     }
   }
 }

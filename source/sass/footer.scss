@@ -1,0 +1,32 @@
+.footer {
+  background-color: $bg-grey;
+}
+
+.footer__block {
+  width: 100%;
+
+  &--logo {
+    text-align: center;
+    padding-top: 38px;
+    padding-bottom: 32px;
+  }
+
+  &--copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+}
+
+.footer__developer {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: normal;
+}
+
+.footer__developer-icon {
+  fill: $footer-icon;
+}

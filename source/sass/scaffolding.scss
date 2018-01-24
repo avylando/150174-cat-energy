@@ -20,8 +20,33 @@ body {
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
+  color: $textcolor;
+  width: 320px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
   @include pad-set(20px);
+}
+
+.button {
+  display: block;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  background-color: $firmcolor;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }

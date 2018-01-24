@@ -1,0 +1,161 @@
+.demo {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  background-color: $bg-grey;
+}
+
+.demo__title {
+  @include title;
+
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.demo__text {
+  font-family: "Arial";
+  margin-top: 0;
+  margin-bottom: 28px;
+}
+
+.demo__stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.demo__stats-item {
+  position: relative;
+  display: flex;
+  width: 124px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border: 1px solid #cfcfcf;
+  border-radius: 5px;
+
+  &--weight {
+    margin-right: 16px;
+
+    .demo__stats-subtitle {
+      @include pad-set(17px);
+    }
+  }
+
+  &--days {
+    margin-left: 16px;
+
+    .demo__stats-subtitle {
+      @include pad-set(24px);
+    }
+  }
+}
+
+.demo__stats-value {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: $textdark;
+  margin: auto;
+}
+
+.demo__stats-subtitle {
+  font-family: "Arial";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -15px;
+  margin: 0 auto;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  width: 110px;
+  background-color: $bg-grey;
+}
+
+.demo__caption {
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $textdark;
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: 40px;
+}
+
+.demo__image-wrapper {
+  display: flex;
+  align-items: center;
+  width: 200%;
+}
+
+.demo__illustration {
+  width: 100%;
+}
+
+.demo__image {
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.demo__progress {
+  padding-bottom: 3px;
+  overflow: hidden;
+
+  .demo__image-wrapper {
+    transform: translateX(0);
+    transition: 0.5s;
+  }
+
+  .demo__progress-toggle {
+    transform: translateX(0);
+    transition: 0.5s;
+  }
+
+  &--after {
+    .demo__image-wrapper {
+      transform: translateX(-50%);
+      transition: 0.5s;
+    }
+
+    .demo__progress-toggle {
+      transform: translateX(100%);
+      transition: 0.5s;
+    }
+  }
+}
+
+.demo__buttons-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 210px;
+  margin: 10px auto 0;
+}
+
+.demo__progress-button {
+  @include button-unstyle;
+
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 60px;
+  // padding: 10px;
+  cursor: pointer;
+}
+
+.demo__progress-bar {
+  width: 84px;
+  height: 14px;
+  padding: 3px 5px;
+  border: 1px solid #cdcdcd;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.demo__progress-toggle {
+  width: 50%;
+  height: 6px;
+  border-radius: 10px;
+  background-color: $firmcolor;
+}

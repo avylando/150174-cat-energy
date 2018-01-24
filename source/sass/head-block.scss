@@ -1,0 +1,35 @@
+.head-block {
+  padding-top: 25px;
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-size: 100% auto;
+  background-position: 0 top;
+  background-repeat: no-repeat;
+}
+
+.head-block__title {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: normal;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 17px;
+}
+
+.head-block__text {
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.head-block__image {
+  display: block;
+  margin: 0 auto;
+}
+
+.head-block__button {
+  width: 100%;
+}

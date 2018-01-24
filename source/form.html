@@ -4,19 +4,33 @@
 <head>
   <meta charset="utf-8">
   <title>Кэт энерджи: Подбор программы</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
+
+  <div style="display: none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
 
   <header class="header">
     <div class="container">
       <div class="header__wrapper">
         <div class="header__top">
-          <img src="" alt="" class="header__logo">
-          <h1 class="header__title">
-            <b>Cat</b> energy</h1>
-          <button class="header__burger" type="button"></button>
+          <svg class="header__logo" width="35" height="40">
+            <use xlink:href="#icon-logo-mobile"></use>
+          </svg>
+          <svg class="header__title-logo" width="103" height="20">
+            <use xlink:href="#logo-mobile-header"></use>
+          </svg>
+          <button class="header__burger" type="button">
+            <svg class="header__burger-icon header__burger-icon--open" width="24" height="19">
+              <use xlink:href="#icon-mobile-menu"></use>
+            </svg>
+            <svg class="header__burger-icon header__burger-icon--close" width="18" height="18">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
         </div>
         <nav class="header__nav">
           <ul class="header__menu">
@@ -179,6 +193,10 @@
       </div>
     </div>
   </footer>
+
+  <script src="js/svg4everybody.min.js"></script>
+  <script>svg4everybody(); // run it now or whenever you are ready</script>
+  <script src="js/toggle.js"></script>
 
 </body>
 

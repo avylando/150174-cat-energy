@@ -65,11 +65,24 @@
   text-transform: uppercase;
   padding: 12px 15px;
   border: 1px solid $header-border;
+  outline: none;
+
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:focus {
+    border: 1px solid $textcolor;
+  }
 }
 
 .fields__textfield {
   flex-grow: 1;
   margin-left: 12px;
+
+  &:focus + .fields__contact-icon{
+    fill: $firmcolor;
+  }
 }
 
 .fields__contact-icon {

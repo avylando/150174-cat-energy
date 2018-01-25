@@ -45,6 +45,8 @@
     border-radius: 50%;
     background-color: $firmcolor;
   }
+
+  @include input-hovers;
 }
 
 .program-type-list__input:checked + .program-type-list__label::after {

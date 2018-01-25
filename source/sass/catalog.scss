@@ -1,0 +1,35 @@
+.catalog {
+  border: 1px solid #ededed;
+}
+
+.catalog__foot {
+  text-align: center;
+  padding-top: 27px;
+  padding-bottom: 24px;
+}
+
+.catalog__icon-plus {
+  fill: #d3d3d3;
+}
+
+.catalog__subtitle {
+  @include minititle;
+
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.catalog__subtext {
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.catalog__show-button {
+  font-family: inherit;
+  color: #222222;
+  width: 100%;
+  background-color: $bg-grey;
+}

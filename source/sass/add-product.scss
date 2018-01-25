@@ -1,0 +1,31 @@
+.add-product {
+  padding-top: 14px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.add-product__title {
+  @include minititle;
+
+  line-height: 16px;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.add-product__options {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.add-product__options-cell {
+  &--quantity {
+    text-align: left;
+  }
+
+  &--price {
+    text-align: right;
+  }
+}

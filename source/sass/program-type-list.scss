@@ -1,0 +1,52 @@
+.program-type-list {
+  @include list-unstyle;
+
+  margin-top: 20px;
+}
+
+.program-type-list__input {
+  display: none;
+}
+
+.program-type-list__item {
+  margin-bottom: 14px;
+}
+
+.program-type-list__label {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  color: $textdark;
+  padding-left: 45px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ededed;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 9px;
+    display: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: $firmcolor;
+  }
+}
+
+.program-type-list__input:checked + .program-type-list__label::after {
+  display: block;
+}

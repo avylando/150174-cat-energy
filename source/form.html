@@ -15,7 +15,7 @@
 
   <header class="header">
     <div class="container">
-      <div class="header__wrapper">
+      <div class="header__wrapper header__wrapper--nojs">
         <div class="header__top">
           <svg class="header__logo" width="35" height="40">
             <use xlink:href="#icon-logo-mobile"></use>
@@ -35,13 +35,19 @@
         <nav class="header__nav">
           <ul class="header__menu">
             <li class="header__menu-item">
-              <a href="index.html" class="header__menu-link">Главная</a>
+              <a href="index.html" class="header__menu-link">
+                <span>Главная</span>
+              </a>
             </li>
             <li class="header__menu-item">
-              <a href="catalog.html" class="header__menu-link">Каталог продукции</a>
+              <a href="catalog.html" class="header__menu-link">
+                <span>Каталог продукции</span>
+              </a>
             </li>
-            <li class="header__menu-item">
-              <a href="form.html" class="header__menu-link">Подбор программы</a>
+            <li class="header__menu-item header__menu-item--active">
+              <a href="form.html" class="header__menu-link">
+                <span>Подбор программы</span>
+              </a>
             </li>
           </ul>
         </nav>
@@ -108,8 +114,8 @@
                 <label for="phone" class="fields__label">Телефон:*</label>
                 <input type="text" class="fields__textfield" id="phone" name="phone" placeholder="8 (960) 900-60-90">
                 <svg class="fields__contact-icon fields__contact-icon--phone" width="21" height="20">
-                    <use xlink:href="#icon-phone"></use>
-                  </svg>
+                  <use xlink:href="#icon-phone"></use>
+                </svg>
               </div>
             </div>
             <div class="fields__set fields__set--descr">

@@ -60,4 +60,27 @@ a {
   border: none;
   outline: none;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $firmcolor-h;
+  }
+
+  &:active {
+    color: rgba($color: #ffffff, $alpha: 0.3);
+  }
+
+  &--grey {
+    color: $textcolor;
+    background-color: $bg-grey;
+
+    &:hover,
+    &:focus {
+      background-color: $bg-grey-h;
+    }
+
+    &:active {
+      color: rgba($color: $textcolor, $alpha: 0.3);
+    }
+  }
 }

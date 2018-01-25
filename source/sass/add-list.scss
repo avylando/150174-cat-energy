@@ -32,6 +32,8 @@
     height: 30px;
     border: 1px solid #ededed;
   }
+
+  @include input-hovers;
 }
 
 .add-list__input:checked + .add-list__label::before {

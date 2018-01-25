@@ -23,7 +23,6 @@
   color: $textdark;
 }
 
-
 @mixin list-unstyle {
   padding: 0;
   margin: 0;
@@ -35,4 +34,17 @@
   padding: 0;
   border: none;
   background-color: transparent;
+}
+
+@mixin input-hovers {
+  &:hover,
+  &:focus {
+    &::before {
+      border-color: #bcbcbc;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

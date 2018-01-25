@@ -1,0 +1,44 @@
+.product {
+  @include pad-reset(20px);
+  @include pad-set(20px);
+
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ededed;
+}
+
+.product__wrapper {
+  display: flex;
+}
+
+.product__illustration {
+  width: 50%;
+}
+
+.product__description {
+  width: 50%;
+}
+
+.product__title {
+  @include minititle;
+
+  width: 60%;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.product__options {
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  width: 100%;
+}
+
+.product__options-cell {
+  &--title {
+    text-align: left;
+  }
+
+  &--value {
+    text-align: right;
+  }
+}

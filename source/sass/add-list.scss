@@ -1,0 +1,42 @@
+.add-list {
+  @include list-unstyle;
+
+  margin-top: 20px;
+}
+
+.add-list__input {
+  display: none;
+}
+
+.add-list__item {
+  margin-bottom: 13px;
+}
+
+.add-list__label {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  color: $textdark;
+  padding-left: 45px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ededed;
+  }
+}
+
+.add-list__input:checked + .add-list__label::before {
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 75%;
+}

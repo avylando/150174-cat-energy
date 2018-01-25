@@ -1,0 +1,39 @@
+.instruction {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.instruction__title {
+  @include title;
+
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.instruction__list {
+  @include list-unstyle;
+}
+
+.instruction__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.instruction__illustration {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  background-color: $firmcolor;
+}
+
+.instruction__image {
+  margin: auto;
+}
+
+.instruction__text {
+  font-family: "Arial", sans-serif;
+  width: calc(100% - 80px);
+  margin: 0;
+}

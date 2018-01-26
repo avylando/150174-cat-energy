@@ -33,3 +33,39 @@
 .head-block__button {
   width: 100%;
 }
+
+@media (min-width: $tablet-width) {
+  .head-block {
+    padding-bottom: 533px;
+    background-image: url("../img/index-can-mobile@1x.png");
+    background-position: center 196px;
+    background-size: 74%;
+  }
+
+  .head-block__wrapper {
+    padding-left: 90px;
+  }
+
+  .head-block__title,
+  .head-block__text {
+    color: $textdark;
+    text-align: left;
+  }
+
+  .head-block__title {
+    @include title-t;
+  }
+
+  .head-block__text {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .head-block__image {
+    display: none;
+  }
+
+  .head-block__button {
+    width: 246px;
+  }
+}

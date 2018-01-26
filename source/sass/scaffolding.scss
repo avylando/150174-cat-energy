@@ -29,7 +29,6 @@ body {
   font-size: 14px;
   line-height: 18px;
   color: $textcolor;
-  width: 320px;
   margin: 0 auto;
 }
 
@@ -82,5 +81,11 @@ a {
     &:active {
       color: rgba($color: $textcolor, $alpha: 0.3);
     }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .container {
+    @include pad-set(30px);
   }
 }

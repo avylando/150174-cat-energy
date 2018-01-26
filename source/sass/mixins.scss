@@ -15,6 +15,11 @@
   color: $textdark;
 }
 
+@mixin title-t {
+  font-size: 60px;
+  line-height: 60px;
+}
+
 @mixin minititle {
   font-size: 16px;
   line-height: 20px;

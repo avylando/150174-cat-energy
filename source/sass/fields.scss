@@ -14,36 +14,35 @@
 }
 
 .fields__head {
+  position: relative;
   display: flex;
   align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  &::before {
+    content: "";
+    z-index: -1;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 34px;
+    right: -20px;
+    background-color: $firmcolor;
+  }
 }
 
 .fields__title {
-  position: relative;
+  display: inline-block;
+  vertical-align: baseline;
   font-size: 24px;
   line-height: 24px;
   font-weight: normal;
   color: $textdark;
   max-width: 205px;
   padding-right: 24px;
-
-  // &::after {
-  //   content: "";
-  //   display: block;
-  //   width: 53px;
-  //   height: 3px;
-  //   position: absolute;
-  //   top: 50%;
-  //   right: -60px;
-  //   background-color: $firmcolor;
-  // }
-}
-
-.fields__title-line {
-  flex-grow: 1;
-  height: 3px;
-  margin-right: -20px;
-  background-color: $firmcolor;
+  margin: 0;
+  background-color: #ffffff;
 }
 
 .fields__block {
@@ -62,6 +61,7 @@
 .fields__textfield,
 .fields__textarea {
   font-family: inherit;
+  font-size: 16px;
   text-transform: uppercase;
   padding: 12px 15px;
   border: 1px solid $header-border;
@@ -80,7 +80,7 @@
   flex-grow: 1;
   margin-left: 12px;
 
-  &:focus + .fields__contact-icon{
+  &:focus + .fields__contact-icon {
     fill: $firmcolor;
   }
 }
@@ -118,4 +118,99 @@
 .fields__note {
   font-family: "Arial", sans-serif;
   line-height: 16px;
+}
+
+@media (min-width: $tablet-width) {
+  .fields {
+    padding-left: 40px;
+    padding-right: 35px;
+    padding-bottom: 72px;
+  }
+
+  .fields__head {
+    &::before {
+      width: 120%;
+      top: 40px;
+      right: -65px;
+    }
+  }
+
+  .fields__title {
+    @include minititle-t;
+    @include pad-reset(40px);
+    @include pad-set(40px);
+
+    max-width: none;
+  }
+
+  .fields__set {
+    margin-bottom: 70px;
+
+    &--program {
+      padding-left: 27px;
+      margin-left: 0;
+      margin-right: -65px;
+      border-right: none;
+    }
+
+    &--contacts {
+      margin-bottom: 20px;
+
+      .fields__title {
+        margin-bottom: 72px;
+      }
+    }
+
+    &--add {
+      margin-bottom: 20px;
+    }
+  }
+
+  .fields__block {
+    margin-bottom: 20px;
+  }
+
+  .fields__label,
+  .fields__textfield,
+  .fields__textarea {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .fields__textfield,
+  .fields__textarea {
+    padding: 10px 20px;
+  }
+
+  .fields__contact-icon {
+    &--mail {
+      right: 21px;
+      top: 22px;
+    }
+
+    &--phone {
+      right: 16px;
+      top: 17px;
+    }
+  }
+
+  .fields__textarea {
+    height: 174px;
+    margin-top: 72px;
+  }
+
+  .fields__button-block {
+    display: flex;
+    align-items: center;
+  }
+
+  .fields__button {
+    width: 284px;
+    margin-right: 60px;
+    margin-bottom: 0;
+  }
+
+  .fields__note {
+    width: 200px;
+  }
 }

@@ -28,6 +28,11 @@
   color: $textdark;
 }
 
+@mixin minititle-t {
+  font-size: 36px;
+  line-height: 36px;
+}
+
 @mixin list-unstyle {
   padding: 0;
   margin: 0;

@@ -16,6 +16,35 @@
   width: 55px;
 }
 
+.social-list__link {
+  display: inline-block;
+  vertical-align: top;
+}
+
 .social-list__icon {
   fill: $footer-icon;
+}
+
+@media (min-width: $tablet-width) {
+  .social-list {
+    padding: 0;
+    border: none;
+  }
+
+  .social-list__icon {
+    &--vk {
+      width: 33px;
+      height: 16px;
+    }
+
+    &--inst {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--fb {
+      width: 14px;
+      height: 28px;
+    }
+  }
 }

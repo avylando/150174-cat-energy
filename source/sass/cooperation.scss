@@ -27,5 +27,35 @@
   font-family: "Arial", sans-serif;
   line-height: 20px;
   width: 50%;
+}
+
+.cooperation__street,
+.cooperation__city {
   margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .cooperation {
+    padding-top: 65px;
+    padding-bottom: 62px;
+  }
+
+  .cooperation__wrapper {
+    @include pad-set(41px);
+  }
+
+  .cooperation__title {
+    width: 30%;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .cooperation__adress {
+    width: 30%;
+    text-align: right;
+  }
+
+  .cooperation__street {
+    margin-bottom: 15px;
+  }
 }

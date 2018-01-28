@@ -158,3 +158,53 @@
     line-height: 20px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .program {
+    width: 46.72%;
+    height: auto;
+    padding-top: 45px;
+    padding-bottom: 60px;
+  }
+
+  .program__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .program__illustration {
+    order: 1;
+    width: 100px;
+    height: 100px;
+  }
+
+  .program__title {
+    order: 2;
+    width: calc(100% - 162px);
+  }
+
+  .program__text {
+    order: 3;
+    width: 100%;
+    padding-bottom: 32px;
+    margin-top: 38px;
+  }
+
+  .program__foot {
+    order: 4;
+    padding-top: 0;
+  }
+
+  .program__icon {
+    &--slim {
+      left: 13px;
+      bottom: 7px;
+    }
+
+    &--pro {
+      left: -17px;
+      bottom: 0;
+    }
+  }
+}

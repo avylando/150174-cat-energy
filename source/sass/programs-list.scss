@@ -1,0 +1,7 @@
+@media (min-width: $desktop-width) {
+  .programs-list__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}

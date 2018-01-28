@@ -94,3 +94,13 @@ a {
     @include pad-set(30px);
   }
 }
+
+@media (min-width: $desktop-width) {
+  body {
+    position: relative;
+  }
+
+  .container {
+    @include pad-set(40px);
+  }
+}

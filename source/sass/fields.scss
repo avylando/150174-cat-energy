@@ -195,7 +195,8 @@
   }
 
   .fields__textarea {
-    height: 174px;
+    line-height: 30px;
+    height: 172px;
     margin-top: 72px;
   }
 
@@ -212,5 +213,57 @@
 
   .fields__note {
     width: 200px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .fields__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .fields__set {
+    &--personal,
+    &--program {
+      width: 46.72%;
+    }
+
+    &--contacts,
+    &--descr,
+    &--add {
+      width: 100%;
+    }
+
+    &--program {
+      margin: 0;
+      border: 1px solid #ededed;
+    }
+
+    &--contacts {
+      .fields__block {
+        width: 46.72%;
+      }
+    }
+  }
+
+  .fields__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .fields__textarea {
+    padding-top: 14px;
+  }
+
+  .fields__button {
+    width: 570px;
+    margin-right: 80px;
+  }
+
+  .fields__note {
+    width: 245px;
   }
 }

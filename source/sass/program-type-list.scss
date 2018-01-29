@@ -82,3 +82,9 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .program-type-list__item {
+    margin-bottom: 16px;
+  }
+}

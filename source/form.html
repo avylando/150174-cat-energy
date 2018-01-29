@@ -102,19 +102,21 @@
               <div class="fields__head">
                 <h2 class="fields__title">Контактные данные (владельца кота)</h2>
               </div>
-              <div class="fields__block">
-                <label for="email" class="fields__label">E-mail:*</label>
-                <input type="text" class="fields__textfield" id="email" name="email" placeholder="kuklachev@gmail.com">
-                <svg class="fields__contact-icon fields__contact-icon--mail" width="17" height="13">
-                  <use xlink:href="#icon-mail"></use>
-                </svg>
-              </div>
-              <div class="fields__block">
-                <label for="phone" class="fields__label">Телефон:*</label>
-                <input type="text" class="fields__textfield" id="phone" name="phone" placeholder="8 (960) 900-60-90">
-                <svg class="fields__contact-icon fields__contact-icon--phone" width="21" height="20">
-                  <use xlink:href="#icon-phone"></use>
-                </svg>
+              <div class="fields__inner">
+                <div class="fields__block">
+                  <label for="email" class="fields__label">E-mail:*</label>
+                  <input type="text" class="fields__textfield" id="email" name="email" placeholder="kuklachev@gmail.com">
+                  <svg class="fields__contact-icon fields__contact-icon--mail" width="17" height="13">
+                    <use xlink:href="#icon-mail"></use>
+                  </svg>
+                </div>
+                <div class="fields__block">
+                  <label for="phone" class="fields__label">Телефон:*</label>
+                  <input type="text" class="fields__textfield" id="phone" name="phone" placeholder="8 (960) 900-60-90">
+                  <svg class="fields__contact-icon fields__contact-icon--phone" width="21" height="20">
+                    <use xlink:href="#icon-phone"></use>
+                  </svg>
+                </div>
               </div>
             </div>
             <div class="fields__set fields__set--descr">
@@ -215,6 +217,28 @@
     </div>
   </footer>
 
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+    ymaps.ready(init);
+    var myMap;
+
+    function init() {
+      myMap = new ymaps.Map("map", {
+        center: [59.938631, 30.323055],
+        zoom: 17
+      });
+
+      var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/map-pin.png',
+        iconImageSize: [45, 53],
+        iconImageOffset: [-23, -53]
+      });
+
+      myMap.geoObjects.add(myPlacemark);
+    }
+  </script>
   <script src="js/svg4everybody.min.js"></script>
   <script>svg4everybody(); // run it now or whenever you are ready</script>
   <script src="js/toggle.js"></script>

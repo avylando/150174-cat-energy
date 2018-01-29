@@ -265,63 +265,65 @@
       <div class="container">
         <div class="add-catalog__wrapper">
           <h2 class="add-catalog__title">Дополнительные товары</h2>
+          <div class="add-catalog__inner">
+            <div class="add-catalog__list">
 
-          <div class="add-catalog__list">
+              <div class="add-catalog__item add-product">
+                <h3 class="add-product__title">Сахарозаменитель</h3>
+                <table class="add-product__options">
+                  <tr>
+                    <td class="add-product__options-cell add-product__options-cell--quantity">1 Упаковка
+                      <span class="add-product__note">(100 г)</span>
+                    </td>
+                    <td class="add-product__options-cell add-product__options-cell--price">100 Р.</td>
+                  </tr>
+                </table>
+                <a href="#" class="add-product__button button">Заказать</a>
+              </div>
 
-            <div class="add-catalog__item add-product">
-              <h3 class="add-product__title">Сахарозаменитель</h3>
-              <table class="add-product__options">
-                <tr>
-                  <td class="add-product__options-cell add-product__options-cell--quantity">1 Упаковка
-                    <span class="add-product__note">(100 г)</span>
-                  </td>
-                  <td class="add-product__options-cell add-product__options-cell--price">100 Р.</td>
-                </tr>
-              </table>
-              <a href="#" class="add-product__button button">Заказать</a>
+              <div class="add-catalog__item add-product">
+                <h3 class="add-product__title">Питьевая вода</h3>
+                <table class="add-product__options">
+                  <tr>
+                    <td class="add-product__options-cell add-product__options-cell--quantity">5 литров</td>
+                    <td class="add-product__options-cell add-product__options-cell--price">500 Р.</td>
+                  </tr>
+                </table>
+                <a href="#" class="add-product__button button">Заказать</a>
+              </div>
+
+              <div class="add-catalog__item add-product">
+                <h3 class="add-product__title">Молоко</h3>
+                <table class="add-product__options">
+                  <tr>
+                    <td class="add-product__options-cell add-product__options-cell--quantity">1 литр</td>
+                    <td class="add-product__options-cell add-product__options-cell--price">100 Р.</td>
+                  </tr>
+                </table>
+                <a href="#" class="add-product__button button">Заказать</a>
+              </div>
+
+              <div class="add-catalog__item add-product">
+                <h3 class="add-product__title">Витамины</h3>
+                <table class="add-product__options">
+                  <tr>
+                    <td class="add-product__options-cell add-product__options-cell--quantity">1 упаковка (30 г)</td>
+                    <td class="add-product__options-cell add-product__options-cell--price">300 Р.</td>
+                  </tr>
+                </table>
+                <a href="#" class="add-product__button button">Заказать</a>
+              </div>
+
             </div>
 
-            <div class="add-catalog__item add-product">
-              <h3 class="add-product__title">Питьевая вода</h3>
-              <table class="add-product__options">
-                <tr>
-                  <td class="add-product__options-cell add-product__options-cell--quantity">5 литров</td>
-                  <td class="add-product__options-cell add-product__options-cell--price">500 Р.</td>
-                </tr>
-              </table>
-              <a href="#" class="add-product__button button">Заказать</a>
+            <div class="add-catalog__promo">
+              <svg class="add-catalog__icon-gift" width="55" height="60">
+                <use xlink:href="#icon-gift"></use>
+              </svg>
+              <p class="add-catalog__promo-text">Закажите все и получите чехол для кота в подарок!</p>
             </div>
-
-            <div class="add-catalog__item add-product">
-              <h3 class="add-product__title">Молоко</h3>
-              <table class="add-product__options">
-                <tr>
-                  <td class="add-product__options-cell add-product__options-cell--quantity">1 литр</td>
-                  <td class="add-product__options-cell add-product__options-cell--price">100 Р.</td>
-                </tr>
-              </table>
-              <a href="#" class="add-product__button button">Заказать</a>
-            </div>
-
-            <div class="add-catalog__item add-product">
-              <h3 class="add-product__title">Витамины</h3>
-              <table class="add-product__options">
-                <tr>
-                  <td class="add-product__options-cell add-product__options-cell--quantity">1 упаковка (30 г)</td>
-                  <td class="add-product__options-cell add-product__options-cell--price">300 Р.</td>
-                </tr>
-              </table>
-              <a href="#" class="add-product__button button">Заказать</a>
-            </div>
-
           </div>
 
-          <div class="add-catalog__promo">
-            <svg class="add-catalog__icon-gift" width="55" height="60">
-              <use xlink:href="#icon-gift"></use>
-            </svg>
-            <p class="add-catalog__promo-text">Закажите все и получите чехол для кота в подарок!</p>
-          </div>
         </div>
       </div>
     </section>
@@ -386,6 +388,28 @@
     </div>
   </footer>
 
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+    ymaps.ready(init);
+    var myMap;
+
+    function init() {
+      myMap = new ymaps.Map("map", {
+        center: [59.938631, 30.323055],
+        zoom: 17
+      });
+
+      var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/map-pin.png',
+        iconImageSize: [50, 53],
+        iconImageOffset: [-25, -53]
+      });
+
+      myMap.geoObjects.add(myPlacemark);
+    }
+  </script>
   <script src="js/svg4everybody.min.js"></script>
   <script>svg4everybody(); // run it now or whenever you are ready</script>
   <script src="js/toggle.js"></script>

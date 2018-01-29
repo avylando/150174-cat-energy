@@ -80,3 +80,10 @@
     margin-bottom: 85px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .catalog__foot,
+  .catalog__item {
+    width: 20.08%;
+  }
+}

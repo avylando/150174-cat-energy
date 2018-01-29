@@ -74,3 +74,26 @@
     width: 100%;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .add-product {
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 16px;
+  }
+
+  .add-product__title {
+    width: 245px;
+    margin: 0;
+  }
+
+  .add-product__options {
+    width: 285px;
+    margin: 0;
+  }
+
+  .add-product__button {
+    width: 245px;
+  }
+}

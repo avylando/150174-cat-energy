@@ -21,7 +21,7 @@
 .product__title {
   @include minititle;
 
-  width: 60%;
+  width: 110px;
   margin-top: 20px;
   margin-bottom: 15px;
 }
@@ -90,5 +90,24 @@
     padding-top: 8px;
     padding-bottom: 8px;
     border-bottom: 1px solid #cdcdcd;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .product {
+    margin-right: 80px;
+
+    &:nth-child(odd) {
+      margin-right: 80px;
+    }
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+
+  .product__title {
+    margin-top: 40px;
+    margin-bottom: 20px;
   }
 }

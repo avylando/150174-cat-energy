@@ -35,3 +35,9 @@
     margin-top: 47px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .title-block {
+    padding-top: 185px;
+  }
+}

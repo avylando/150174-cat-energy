@@ -15,6 +15,11 @@
   color: $textdark;
 }
 
+@mixin title-t {
+  font-size: 60px;
+  line-height: 60px;
+}
+
 @mixin minititle {
   font-size: 16px;
   line-height: 20px;
@@ -23,6 +28,10 @@
   color: $textdark;
 }
 
+@mixin minititle-t {
+  font-size: 36px;
+  line-height: 36px;
+}
 
 @mixin list-unstyle {
   padding: 0;
@@ -35,4 +44,17 @@
   padding: 0;
   border: none;
   background-color: transparent;
+}
+
+@mixin input-hovers {
+  &:hover,
+  &:focus {
+    &::before {
+      border-color: #bcbcbc;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

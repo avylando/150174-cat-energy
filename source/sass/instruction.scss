@@ -37,3 +37,49 @@
   width: calc(100% - 80px);
   margin: 0;
 }
+
+@media (min-width: $tablet-width) {
+  .instruction {
+    padding-top: 50px;
+  }
+
+  .instruction__title {
+    font-size: 60px;
+    margin-bottom: 70px;
+  }
+
+  .instruction__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-right: 72px;
+  }
+
+  .instruction__item {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 35.31%;
+    padding-bottom: 50px;
+    margin-bottom: 132px;
+  }
+
+  .instruction__illustration {
+    margin-bottom: 35px;
+  }
+
+  .instruction__text {
+    width: 100%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .instruction {
+    padding-bottom: 25px;
+  }
+
+  .instruction__item {
+    width: 245px;
+    margin-bottom: 0;
+  }
+}

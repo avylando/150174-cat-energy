@@ -30,3 +30,44 @@
 .footer__developer-icon {
   fill: $footer-icon;
 }
+
+@media (min-width: $tablet-width) {
+  .footer {
+    padding-top: 63px;
+    padding-bottom: 47px;
+  }
+
+  .footer__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .footer__block {
+    text-align: left;
+    padding: 0;
+
+    &--logo {
+      justify-content: flex-start;
+      width: 22.88%;
+    }
+
+    &--copyright {
+      justify-content: flex-end;
+      width: 22.88%;
+    }
+
+    &--social {
+      width: 54.24%;
+    }
+  }
+
+  .footer__developer {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footer__block {
+
+  }
+}

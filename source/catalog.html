@@ -15,7 +15,7 @@
 
   <header class="header">
     <div class="container">
-      <div class="header__wrapper">
+      <div class="header__wrapper header__wrapper--nojs">
         <div class="header__top">
           <svg class="header__logo" width="35" height="40">
             <use xlink:href="#icon-logo-mobile"></use>
@@ -35,13 +35,19 @@
         <nav class="header__nav">
           <ul class="header__menu">
             <li class="header__menu-item">
-              <a href="index.html" class="header__menu-link">Главная</a>
+              <a href="index.html" class="header__menu-link">
+                <span>Главная</span>
+              </a>
+            </li>
+            <li class="header__menu-item header__menu-item--active">
+              <a href="catalog.html" class="header__menu-link">
+                <span>Каталог продукции</span>
+              </a>
             </li>
             <li class="header__menu-item">
-              <a href="catalog.html" class="header__menu-link">Каталог продукции</a>
-            </li>
-            <li class="header__menu-item">
-              <a href="form.html" class="header__menu-link">Подбор программы</a>
+              <a href="form.html" class="header__menu-link">
+                <span>Подбор программы</span>
+              </a>
             </li>
           </ul>
         </nav>
@@ -90,7 +96,7 @@
           <article class="catalog__item product">
             <div class="product__wrapper">
               <div class="product__illustration">
-                  <img class="product__image" src="img/chicken-big-mobile@1x.jpg" alt="chicken-big" width="140" height="144">
+                <img class="product__image" src="img/chicken-big-mobile@1x.jpg" alt="chicken-big" width="140" height="144">
               </div>
               <div class="product__description">
                 <h2 class="product__title">Cat Energy PRO 1000 г</h2>
@@ -116,7 +122,7 @@
           <article class="catalog__item product">
             <div class="product__wrapper">
               <div class="product__illustration">
-                  <img class="product__image" src="img/fish-small-mobile@1x.jpg" alt="fish-small" width="140" height="144">
+                <img class="product__image" src="img/fish-small-mobile@1x.jpg" alt="fish-small" width="140" height="144">
               </div>
               <div class="product__description">
                 <h2 class="product__title">Cat Energy PRO 500 г</h2>
@@ -142,7 +148,7 @@
           <article class="catalog__item product">
             <div class="product__wrapper">
               <div class="product__illustration">
-                  <img class="product__image" src="img/fish-big-mobile@1x.jpg" alt="fish-big" width="140" height="144">
+                <img class="product__image" src="img/fish-big-mobile@1x.jpg" alt="fish-big" width="140" height="144">
               </div>
               <div class="product__description">
                 <h2 class="product__title">Cat Energy PRO 1000 г</h2>
@@ -168,7 +174,7 @@
           <article class="catalog__item product">
             <div class="product__wrapper">
               <div class="product__illustration">
-                  <img class="product__image" src="img/buckwheat-small-mobile@1x.jpg" alt="buckwheat-small" width="140" height="144">
+                <img class="product__image" src="img/buckwheat-small-mobile@1x.jpg" alt="buckwheat-small" width="140" height="144">
               </div>
               <div class="product__description">
                 <h2 class="product__title">Cat Energy Slim 500 г</h2>
@@ -194,7 +200,7 @@
           <article class="catalog__item product">
             <div class="product__wrapper">
               <div class="product__illustration">
-                  <img class="product__image" src="img/buckwheat-big-mobile@1x.jpg" alt="buckwheat-big" width="140" height="144">
+                <img class="product__image" src="img/buckwheat-big-mobile@1x.jpg" alt="buckwheat-big" width="140" height="144">
               </div>
               <div class="product__description">
                 <h2 class="product__title">Cat Energy Slim 1000 г</h2>
@@ -220,7 +226,7 @@
           <article class="catalog__item product">
             <div class="product__wrapper">
               <div class="product__illustration">
-                  <img class="product__image" src="img/rice-small-mobile@1x.jpg" alt="rice-small" width="140" height="144">
+                <img class="product__image" src="img/rice-small-mobile@1x.jpg" alt="rice-small" width="140" height="144">
               </div>
               <div class="product__description">
                 <h2 class="product__title">Cat Energy Slim 500 г</h2>
@@ -249,7 +255,7 @@
             </svg>
             <h3 class="catalog__subtitle">Показать еще 100500 товаров</h3>
             <p class="catalog__subtext">На самом деле вкусов гораздо больше!</p>
-            <button class="catalog__show-button button" type="button">Показать все</button>
+            <button class="catalog__show-button button button--grey" type="button">Показать все</button>
           </div>
         </div>
       </div>
@@ -259,75 +265,83 @@
       <div class="container">
         <div class="add-catalog__wrapper">
           <h2 class="add-catalog__title">Дополнительные товары</h2>
+          <div class="add-catalog__inner">
+            <div class="add-catalog__list">
 
-          <div class="add-catalog__list">
+              <div class="add-catalog__item add-product">
+                <h3 class="add-product__title">Сахарозаменитель</h3>
+                <table class="add-product__options">
+                  <tr>
+                    <td class="add-product__options-cell add-product__options-cell--quantity">1 Упаковка
+                      <span class="add-product__note">(100 г)</span>
+                    </td>
+                    <td class="add-product__options-cell add-product__options-cell--price">100 Р.</td>
+                  </tr>
+                </table>
+                <a href="#" class="add-product__button button">Заказать</a>
+              </div>
 
-            <div class="add-catalog__item add-product">
-              <h3 class="add-product__title">Сахарозаменитель</h3>
-              <table class="add-product__options">
-                <tr>
-                  <td class="add-product__options-cell add-product__options-cell--quantity">1 Упаковка</td>
-                  <td class="add-product__options-cell add-product__options-cell--price">100 Р.</td>
-                </tr>
-              </table>
-              <a href="#" class="add-product__button button">Заказать</a>
+              <div class="add-catalog__item add-product">
+                <h3 class="add-product__title">Питьевая вода</h3>
+                <table class="add-product__options">
+                  <tr>
+                    <td class="add-product__options-cell add-product__options-cell--quantity">5 литров</td>
+                    <td class="add-product__options-cell add-product__options-cell--price">500 Р.</td>
+                  </tr>
+                </table>
+                <a href="#" class="add-product__button button">Заказать</a>
+              </div>
+
+              <div class="add-catalog__item add-product">
+                <h3 class="add-product__title">Молоко</h3>
+                <table class="add-product__options">
+                  <tr>
+                    <td class="add-product__options-cell add-product__options-cell--quantity">1 литр</td>
+                    <td class="add-product__options-cell add-product__options-cell--price">100 Р.</td>
+                  </tr>
+                </table>
+                <a href="#" class="add-product__button button">Заказать</a>
+              </div>
+
+              <div class="add-catalog__item add-product">
+                <h3 class="add-product__title">Витамины</h3>
+                <table class="add-product__options">
+                  <tr>
+                    <td class="add-product__options-cell add-product__options-cell--quantity">1 упаковка (30 г)</td>
+                    <td class="add-product__options-cell add-product__options-cell--price">300 Р.</td>
+                  </tr>
+                </table>
+                <a href="#" class="add-product__button button">Заказать</a>
+              </div>
+
             </div>
 
-            <div class="add-catalog__item add-product">
-              <h3 class="add-product__title">Питьевая вода</h3>
-              <table class="add-product__options">
-                <tr>
-                  <td class="add-product__options-cell add-product__options-cell--quantity">5 литров</td>
-                  <td class="add-product__options-cell add-product__options-cell--price">500 Р.</td>
-                </tr>
-              </table>
-              <a href="#" class="add-product__button button">Заказать</a>
+            <div class="add-catalog__promo">
+              <svg class="add-catalog__icon-gift" width="55" height="60">
+                <use xlink:href="#icon-gift"></use>
+              </svg>
+              <p class="add-catalog__promo-text">Закажите все и получите чехол для кота в подарок!</p>
             </div>
-
-            <div class="add-catalog__item add-product">
-              <h3 class="add-product__title">Молоко</h3>
-              <table class="add-product__options">
-                <tr>
-                  <td class="add-product__options-cell add-product__options-cell--quantity">1 литр</td>
-                  <td class="add-product__options-cell add-product__options-cell--price">100 Р.</td>
-                </tr>
-              </table>
-              <a href="#" class="add-product__button button">Заказать</a>
-            </div>
-
-            <div class="add-catalog__item add-product">
-              <h3 class="add-product__title">Витамины</h3>
-              <table class="add-product__options">
-                <tr>
-                  <td class="add-product__options-cell add-product__options-cell--quantity">1 упаковка (30 г)</td>
-                  <td class="add-product__options-cell add-product__options-cell--price">300 Р.</td>
-                </tr>
-              </table>
-              <a href="#" class="add-product__button button">Заказать</a>
-            </div>
-
           </div>
 
-          <div class="add-catalog__promo">
-            <svg class="add-catalog__icon-gift" width="55" height="60">
-              <use xlink:href="#icon-gift"></use>
-            </svg>
-            <p class="add-catalog__promo-text">Закажите все и получите чехол для кота в подарок!</p>
-          </div>
         </div>
       </div>
     </section>
 
     <section class="cooperation">
-      <div class="container">
-        <div class="cooperation__wrapper">
-          <h2 class="cooperation__title">Приглашаем к сотрудничеству дилеров!</h2>
-          <p class="cooperation__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <div class="cooperation__wrapper">
+        <div class="container">
+          <div class="cooperation__inner">
+            <h2 class="cooperation__title">Приглашаем к сотрудничеству дилеров!</h2>
+            <div class="cooperation__adress">
+              <p class="cooperation__street">ул. Большая Конюшенная, д. 19/8</p>
+              <p class="cooperation__city">Санкт-Петербург</p>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="cooperation__map" id="map"></div>
     </section>
-
-    <section class="map" id="map"></section>
 
   </main>
 
@@ -343,21 +357,21 @@
           <ul class="footer__list social-list">
             <li class="social-list__item">
               <a href="" class="social-list__link">
-                <svg class="social-list__icon" width="22" height="12">
+                <svg class="social-list__icon social-list__icon--vk" width="22" height="12">
                   <use xlink:href="#icon-vk-mobile"></use>
                 </svg>
               </a>
             </li>
             <li class="social-list__item">
               <a href="" class="social-list__link">
-                <svg class="social-list__icon" width="16" height="16">
+                <svg class="social-list__icon social-list__icon--inst" width="16" height="16">
                   <use xlink:href="#icon-insta-mobile"></use>
                 </svg>
               </a>
             </li>
             <li class="social-list__item">
               <a href="" class="social-list__link">
-                <svg class="social-list__icon" width="10" height="19">
+                <svg class="social-list__icon social-list__icon--fb" width="10" height="19">
                   <use xlink:href="#icon-fb-mobile"></use>
                 </svg>
               </a>
@@ -374,6 +388,28 @@
     </div>
   </footer>
 
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+    ymaps.ready(init);
+    var myMap;
+
+    function init() {
+      myMap = new ymaps.Map("map", {
+        center: [59.938631, 30.323055],
+        zoom: 17
+      });
+
+      var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/map-pin.png',
+        iconImageSize: [50, 53],
+        iconImageOffset: [-25, -53]
+      });
+
+      myMap.geoObjects.add(myPlacemark);
+    }
+  </script>
   <script src="js/svg4everybody.min.js"></script>
   <script>svg4everybody(); // run it now or whenever you are ready</script>
   <script src="js/toggle.js"></script>

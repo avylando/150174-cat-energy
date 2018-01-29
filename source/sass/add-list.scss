@@ -32,6 +32,8 @@
     height: 30px;
     border: 1px solid #ededed;
   }
+
+  @include input-hovers;
 }
 
 .add-list__input:checked + .add-list__label::before {
@@ -39,4 +41,41 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 75%;
+}
+
+@media (min-width: $tablet-width) {
+  .add-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top: 24px;
+  }
+
+  .add-list__item {
+    width: 50%;
+    margin-bottom: 32px;
+  }
+
+  .add-list__label {
+    font-size: 20px;
+    line-height: 20px;
+    padding-left: 57px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+
+    &::before {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .add-list {
+    justify-content: space-between;
+  }
+
+  .add-list__item {
+    width: 245px;
+  }
 }

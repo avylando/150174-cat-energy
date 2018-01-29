@@ -1,25 +1,33 @@
 .add-catalog {
+  padding-top: 30px;
   padding-bottom: 35px;
 }
 
 .add-catalog__title {
   @include title;
 
-  position: relative;
+  display: inline-block;
+  vertical-align: baseline;
   font-size: 24px;
   line-height: 24px;
-  width: calc(100% - 40px);
-  margin-top: 30px;
+  width: auto;
+  padding-right: 24px;
+  margin-top: 0;
   margin-bottom: 30px;
+  background-color: #ffffff;
+}
 
-  &::after {
+.add-catalog__wrapper {
+  position: relative;
+
+  &::before {
     content: "";
-    display: block;
-    width: 53px;
+    z-index: -1;
+    width: 100%;
     height: 3px;
     position: absolute;
-    top: 50%;
-    right: -60px;
+    top: 15px;
+    right: -20px;
     background-color: $firmcolor;
   }
 }
@@ -50,4 +58,66 @@
   text-align: center;
   width: 60%;
   margin: 60px auto 0;
+}
+
+@media (min-width: $tablet-width) {
+  .add-catalog {
+    margin-top: -100px;
+    overflow-x: hidden;
+  }
+
+  .add-catalog__title {
+    @include minititle-t;
+
+    padding-left: 36px;
+    padding-right: 36px;
+    margin-bottom: 75px;
+  }
+
+  .add-catalog__wrapper {
+    &::before {
+      width: 110%;
+      top: 20px;
+      right: -30px;
+    }
+  }
+
+  .add-catalog__promo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 90px;
+    padding-right: 100px;
+    padding-top: 62px;
+    padding-bottom: 74px;
+  }
+
+  .add-catalog__promo-text {
+    text-align: left;
+    width: 175px;
+    margin: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .add-catalog__inner {
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+  }
+
+  .add-catalog__list {
+    width: 895px;
+    margin-right: 80px;
+  }
+
+  .add-catalog__promo {
+    flex-direction: column;
+    width: 245px;
+    margin-top: 0;
+  }
+
+  .add-catalog__promo-text {
+    text-align: center;
+  }
 }

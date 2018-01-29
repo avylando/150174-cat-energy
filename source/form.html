@@ -15,7 +15,7 @@
 
   <header class="header">
     <div class="container">
-      <div class="header__wrapper">
+      <div class="header__wrapper header__wrapper--nojs">
         <div class="header__top">
           <svg class="header__logo" width="35" height="40">
             <use xlink:href="#icon-logo-mobile"></use>
@@ -35,13 +35,19 @@
         <nav class="header__nav">
           <ul class="header__menu">
             <li class="header__menu-item">
-              <a href="index.html" class="header__menu-link">Главная</a>
+              <a href="index.html" class="header__menu-link">
+                <span>Главная</span>
+              </a>
             </li>
             <li class="header__menu-item">
-              <a href="catalog.html" class="header__menu-link">Каталог продукции</a>
+              <a href="catalog.html" class="header__menu-link">
+                <span>Каталог продукции</span>
+              </a>
             </li>
-            <li class="header__menu-item">
-              <a href="form.html" class="header__menu-link">Подбор программы</a>
+            <li class="header__menu-item header__menu-item--active">
+              <a href="form.html" class="header__menu-link">
+                <span>Подбор программы</span>
+              </a>
             </li>
           </ul>
         </nav>
@@ -95,34 +101,33 @@
             <div class="fields__set fields__set--contacts">
               <div class="fields__head">
                 <h2 class="fields__title">Контактные данные (владельца кота)</h2>
-                <div class="fields__title-line"></div>
               </div>
-              <div class="fields__block">
-                <label for="email" class="fields__label">E-mail:*</label>
-                <input type="text" class="fields__textfield" id="email" name="email" placeholder="kuklachev@gmail.com">
-                <svg class="fields__contact-icon fields__contact-icon--mail" width="17" height="13">
-                  <use xlink:href="#icon-mail"></use>
-                </svg>
-              </div>
-              <div class="fields__block">
-                <label for="phone" class="fields__label">Телефон:*</label>
-                <input type="text" class="fields__textfield" id="phone" name="phone" placeholder="8 (960) 900-60-90">
-                <svg class="fields__contact-icon fields__contact-icon--phone" width="21" height="20">
+              <div class="fields__inner">
+                <div class="fields__block">
+                  <label for="email" class="fields__label">E-mail:*</label>
+                  <input type="text" class="fields__textfield" id="email" name="email" placeholder="kuklachev@gmail.com">
+                  <svg class="fields__contact-icon fields__contact-icon--mail" width="17" height="13">
+                    <use xlink:href="#icon-mail"></use>
+                  </svg>
+                </div>
+                <div class="fields__block">
+                  <label for="phone" class="fields__label">Телефон:*</label>
+                  <input type="text" class="fields__textfield" id="phone" name="phone" placeholder="8 (960) 900-60-90">
+                  <svg class="fields__contact-icon fields__contact-icon--phone" width="21" height="20">
                     <use xlink:href="#icon-phone"></use>
                   </svg>
+                </div>
               </div>
             </div>
             <div class="fields__set fields__set--descr">
               <div class="fields__head">
                 <h2 class="fields__title">Комментарий</h2>
-                <div class="fields__title-line"></div>
               </div>
               <textarea class="fields__textarea" name="additional" placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
             <div class="fields__set fields__set--add">
               <div class="fields__head">
                 <h2 class="fields__title">Дополнительно</h2>
-                <div class="fields__title-line"></div>
               </div>
               <ul class="fields__list add-list">
                 <li class="add-list__item">
@@ -153,15 +158,19 @@
     </section>
 
     <section class="cooperation">
-      <div class="container">
-        <div class="cooperation__wrapper">
-          <h2 class="cooperation__title">Приглашаем к сотрудничеству дилеров!</h2>
-          <p class="cooperation__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <div class="cooperation__wrapper">
+        <div class="container">
+          <div class="cooperation__inner">
+            <h2 class="cooperation__title">Приглашаем к сотрудничеству дилеров!</h2>
+            <div class="cooperation__adress">
+              <p class="cooperation__street">ул. Большая Конюшенная, д. 19/8</p>
+              <p class="cooperation__city">Санкт-Петербург</p>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="cooperation__map" id="map"></div>
     </section>
-
-    <section class="map" id="map"></section>
 
   </main>
 
@@ -177,21 +186,21 @@
           <ul class="footer__list social-list">
             <li class="social-list__item">
               <a href="" class="social-list__link">
-                <svg class="social-list__icon" width="22" height="12">
+                <svg class="social-list__icon social-list__icon--vk" width="22" height="12">
                   <use xlink:href="#icon-vk-mobile"></use>
                 </svg>
               </a>
             </li>
             <li class="social-list__item">
               <a href="" class="social-list__link">
-                <svg class="social-list__icon" width="16" height="16">
+                <svg class="social-list__icon social-list__icon--inst" width="16" height="16">
                   <use xlink:href="#icon-insta-mobile"></use>
                 </svg>
               </a>
             </li>
             <li class="social-list__item">
               <a href="" class="social-list__link">
-                <svg class="social-list__icon" width="10" height="19">
+                <svg class="social-list__icon social-list__icon--fb" width="10" height="19">
                   <use xlink:href="#icon-fb-mobile"></use>
                 </svg>
               </a>
@@ -208,6 +217,28 @@
     </div>
   </footer>
 
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+    ymaps.ready(init);
+    var myMap;
+
+    function init() {
+      myMap = new ymaps.Map("map", {
+        center: [59.938631, 30.323055],
+        zoom: 17
+      });
+
+      var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/map-pin.png',
+        iconImageSize: [45, 53],
+        iconImageOffset: [-23, -53]
+      });
+
+      myMap.geoObjects.add(myPlacemark);
+    }
+  </script>
   <script src="js/svg4everybody.min.js"></script>
   <script>svg4everybody(); // run it now or whenever you are ready</script>
   <script src="js/toggle.js"></script>

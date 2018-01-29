@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Кэт энерджи: Подбор программы</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+  <div style="display: none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header__wrapper header__wrapper--nojs">
+        <div class="header__top">
+          <svg class="header__logo" width="35" height="40">
+            <use xlink:href="#icon-logo-mobile"></use>
+          </svg>
+          <svg class="header__title-logo" width="103" height="20">
+            <use xlink:href="#logo-mobile-header"></use>
+          </svg>
+          <button class="header__burger" type="button">
+            <svg class="header__burger-icon header__burger-icon--open" width="24" height="19">
+              <use xlink:href="#icon-mobile-menu"></use>
+            </svg>
+            <svg class="header__burger-icon header__burger-icon--close" width="18" height="18">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__menu">
+            <li class="header__menu-item">
+              <a href="index.html" class="header__menu-link">
+                <span>Главная</span>
+              </a>
+            </li>
+            <li class="header__menu-item">
+              <a href="catalog.html" class="header__menu-link">
+                <span>Каталог продукции</span>
+              </a>
+            </li>
+            <li class="header__menu-item header__menu-item--active">
+              <a href="form.html" class="header__menu-link">
+                <span>Подбор программы</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="title-block">
+      <div class="container">
+        <h1 class="title-block__title">Подбор программы</h1>
+        <p class="title-block__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+      </div>
+    </section>
+
+    <section class="selection">
+      <div class="container">
+        <form action="https://echo.htmlacademy.ru" class="selection__form fields" method="get">
+          <div class="fields__wrapper">
+            <div class="fields__set fields__set--personal">
+              <div class="fields__block">
+                <label for="catname" class="fields__label">Имя:*</label>
+                <input type="text" class="fields__textfield" id="catname" name="catname" placeholder="Барсик">
+              </div>
+              <div class="fields__block">
+                <label for="weight" class="fields__label">Вес (кг):*</label>
+                <input type="text" class="fields__textfield" id="weight" name="weight" placeholder="7">
+              </div>
+              <div class="fields__block">
+                <label for="age" class="fields__label">Возраст (лет):</label>
+                <input type="text" class="fields__textfield" id="age" name="age" placeholder="7">
+              </div>
+            </div>
+            <div class="fields__set fields__set--program">
+              <ul class="fields__list program-type-list">
+                <li class="program-type-list__item">
+                  <input type="radio" class="program-type-list__input" name="program" value="slim" id="slim" checked>
+                  <label for="slim" class="program-type-list__label">Похудение</label>
+                </li>
+                <li class="program-type-list__item">
+                  <input type="radio" class="program-type-list__input" name="program" value="mass" id="mass">
+                  <label for="mass" class="program-type-list__label">Набор массы</label>
+                </li>
+                <li class="program-type-list__item">
+                  <input type="radio" class="program-type-list__input" name="program" value="advice" id="advice">
+                  <label for="advice" class="program-type-list__label">Не знаю (нужен ваш совет)</label>
+                </li>
+              </ul>
+            </div>
+            <div class="fields__set fields__set--contacts">
+              <div class="fields__head">
+                <h2 class="fields__title">Контактные данные (владельца кота)</h2>
+                <div class="fields__title-line"></div>
+              </div>
+              <div class="fields__block">
+                <label for="email" class="fields__label">E-mail:*</label>
+                <input type="text" class="fields__textfield" id="email" name="email" placeholder="kuklachev@gmail.com">
+                <svg class="fields__contact-icon fields__contact-icon--mail" width="17" height="13">
+                  <use xlink:href="#icon-mail"></use>
+                </svg>
+              </div>
+              <div class="fields__block">
+                <label for="phone" class="fields__label">Телефон:*</label>
+                <input type="text" class="fields__textfield" id="phone" name="phone" placeholder="8 (960) 900-60-90">
+                <svg class="fields__contact-icon fields__contact-icon--phone" width="21" height="20">
+                  <use xlink:href="#icon-phone"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="fields__set fields__set--descr">
+              <div class="fields__head">
+                <h2 class="fields__title">Комментарий</h2>
+                <div class="fields__title-line"></div>
+              </div>
+              <textarea class="fields__textarea" name="additional" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </div>
+            <div class="fields__set fields__set--add">
+              <div class="fields__head">
+                <h2 class="fields__title">Дополнительно</h2>
+                <div class="fields__title-line"></div>
+              </div>
+              <ul class="fields__list add-list">
+                <li class="add-list__item">
+                  <input type="checkbox" class="add-list__input" name="sweetener" id="sweetener">
+                  <label for="sweetener" class="add-list__label">Сахарозаменитель</label>
+                </li>
+                <li class="add-list__item">
+                  <input type="checkbox" class="add-list__input" name="water" id="water">
+                  <label for="water" class="add-list__label">Питьевая вода</label>
+                </li>
+                <li class="add-list__item">
+                  <input type="checkbox" class="add-list__input" name="milk" id="milk">
+                  <label for="milk" class="add-list__label">Молоко</label>
+                </li>
+                <li class="add-list__item">
+                  <input type="checkbox" class="add-list__input" name="vitamins" id="vitamins">
+                  <label for="vitamins" class="add-list__label">Витамины</label>
+                </li>
+              </ul>
+            </div>
+            <div class="fields__button-block">
+              <button class="fields__button button" type="submit">Отправить заявку</button>
+              <span class="fields__note">* — Обязательные поля</span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="cooperation">
+      <div class="container">
+        <div class="cooperation__wrapper">
+          <h2 class="cooperation__title">Приглашаем к сотрудничеству дилеров!</h2>
+          <p class="cooperation__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="map" id="map"></section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__wrapper">
+        <div class="footer__block footer__block--logo">
+          <svg class="footer__logo" width="135" height="25">
+            <use xlink:href="#logo-footer"></use>
+          </svg>
+        </div>
+        <div class="footer__block footer__block--social">
+          <ul class="footer__list social-list">
+            <li class="social-list__item">
+              <a href="" class="social-list__link">
+                <svg class="social-list__icon" width="22" height="12">
+                  <use xlink:href="#icon-vk-mobile"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a href="" class="social-list__link">
+                <svg class="social-list__icon" width="16" height="16">
+                  <use xlink:href="#icon-insta-mobile"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a href="" class="social-list__link">
+                <svg class="social-list__icon" width="10" height="19">
+                  <use xlink:href="#icon-fb-mobile"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__block footer__block--copyright">
+          <h3 class="footer__developer">HTML Academy</h3>
+          <svg class="footer__developer-icon" width="27" height="34">
+            <use xlink:href="#logo-htmlacademy"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/svg4everybody.min.js"></script>
+  <script>svg4everybody(); // run it now or whenever you are ready</script>
+  <script src="js/toggle.js"></script>
+
+</body>
+
+</html>

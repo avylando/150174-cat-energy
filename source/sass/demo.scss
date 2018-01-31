@@ -1,6 +1,6 @@
 .demo {
-  padding-top: 20px;
-  padding-bottom: 30px;
+  padding-top: 17px;
+  padding-bottom: 24px;
   background-color: $bg-grey;
 }
 
@@ -8,13 +8,14 @@
   @include title;
 
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .demo__text {
   font-family: "Arial", sans-serif;
+  width: 95%;
   margin-top: 0;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
 .demo__stats-list {
@@ -63,7 +64,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -15px;
+  bottom: -14px;
   margin: 0 auto;
   font-size: 12px;
   line-height: 12px;
@@ -77,7 +78,7 @@
   text-transform: uppercase;
   color: $textdark;
   text-align: center;
-  margin-top: 35px;
+  margin-top: 34px;
   margin-bottom: 40px;
 }
 
@@ -89,13 +90,26 @@
 
 .demo__illustration {
   width: 100%;
+  height: 240px;
+  background-repeat: no-repeat;
+
+  &--before {
+    background-image: url("../img/before-mobile@1x.png");
+    background-size: 114% 100%;
+    background-position: -19px -6px;
+  }
+
+  &--after {
+    background-image: url("../img/after-mobile@1x.png");
+    background-position: -19px 0px;
+  }
 }
 
-.demo__image {
-  display: block;
-  width: 280px;
-  margin: 0 auto;
-}
+// .demo__image {
+//   display: block;
+//   width: 280px;
+//   margin: 0 auto;
+// }
 
 .demo__progress {
   padding-bottom: 3px;
@@ -128,13 +142,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 210px;
-  margin: 10px auto 0;
+  width: 219px;
+  margin: 15px auto 0;
 }
 
 .demo__progress-button {
   @include button-unstyle;
 
+  font-size: 16px;
+  line-height: 20px;
   text-transform: uppercase;
   text-align: center;
   padding-top: 10px;
@@ -274,9 +290,9 @@
     }
   }
 
-  .demo__image {
-    display: none;
-  }
+  // .demo__image {
+  //   display: none;
+  // }
 
   .demo__buttons-block {
     @include pad-set(20px);

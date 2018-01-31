@@ -9,14 +9,17 @@
 }
 
 .program-type-list__item {
-  margin-bottom: 14px;
+  margin-bottom: 13px;
 }
 
 .program-type-list__label {
   position: relative;
   display: inline-block;
+  font-size: 16px;
+  line-height: 18px;
   text-transform: uppercase;
   color: $textdark;
+  width: 100%;
   padding-left: 45px;
   padding-top: 6px;
   padding-bottom: 6px;

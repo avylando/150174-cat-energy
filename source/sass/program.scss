@@ -1,5 +1,5 @@
 .program {
-  padding: 20px;
+  padding: 21px;
   margin-top: 22px;
   background-color: $bg-grey;
 }
@@ -29,7 +29,7 @@
 
   &--pro {
     left: -9px;
-    bottom: 10px;
+    bottom: 13px;
   }
 }
 
@@ -40,21 +40,21 @@
   text-transform: uppercase;
   color: $textdark;
   width: calc(100% - 70px);
-  margin-top: 12px;
+  margin-top: 10px;
   margin-bottom: 12px;
 }
 
 .program__text {
   font-family: "Arial", sans-serif;
   width: 100%;
-  padding-bottom: 25px;
-  margin-top: 20px;
+  padding-bottom: 21px;
+  margin-top: 18px;
   margin-bottom: 0;
   border-bottom: 1px solid #d9d9d9;
 }
 
 .program__foot {
-  padding-top: 16px;
+  padding-top: 20px;
 }
 
 .program__link {

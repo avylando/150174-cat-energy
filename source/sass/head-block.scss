@@ -1,5 +1,5 @@
 .head-block {
-  padding-top: 25px;
+  padding-top: 26px;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-size: 100% 305px;
   background-position: 0 top;
@@ -13,7 +13,7 @@
   color: #ffffff;
   text-align: center;
   margin-top: 0;
-  margin-bottom: 17px;
+  margin-bottom: 28px;
 }
 
 .head-block__text {
@@ -22,7 +22,7 @@
   color: #ffffff;
   text-align: center;
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 27px;
 }
 
 .head-block__image {
@@ -31,13 +31,19 @@
 }
 
 .head-block__button {
+  font-size: 14px;
+  line-height: 18px;
   width: 100%;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  margin-top: 3px;
 }
 
 @media (min-width: $tablet-width) {
   .head-block {
+    padding-top: 52px;
     padding-bottom: 533px;
-    background-image: url("../img/index-can-mobile@1x.png");
+    background-image: url("../img/index-can-tablet.jpg");
     background-position: center 196px;
     background-size: 74% 575px;
   }
@@ -56,13 +62,13 @@
     @include title-t;
 
     width: 420px;
-    margin-bottom: 36px;
+    margin-bottom: 40px;
   }
 
   .head-block__text {
     font-size: 20px;
     line-height: 20px;
-    margin-bottom: 36px;
+    margin-bottom: 43px;
   }
 
   .head-block__image {
@@ -70,6 +76,10 @@
   }
 
   .head-block__button {
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     width: 246px;
   }
 }

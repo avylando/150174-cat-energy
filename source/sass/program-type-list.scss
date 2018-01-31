@@ -52,3 +52,39 @@
 .program-type-list__input:checked + .program-type-list__label::after {
   display: block;
 }
+
+@media (min-width: $tablet-width) {
+  .program-type-list {
+    margin-top: 24px;
+  }
+
+  .program-type-list__item {
+    margin-bottom: 24px;
+  }
+
+  .program-type-list__label {
+    font-size: 20px;
+    line-height: 20px;
+    padding-left: 57px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+
+    &::before {
+      width: 40px;
+      height: 40px;
+    }
+
+    &::after {
+      left: 11px;
+      top: 11px;
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program-type-list__item {
+    margin-bottom: 16px;
+  }
+}

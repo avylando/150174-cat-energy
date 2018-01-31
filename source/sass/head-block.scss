@@ -1,7 +1,7 @@
 .head-block {
   padding-top: 25px;
   background-image: url("../img/index-background-mobile@1x.jpg");
-  background-size: 100% auto;
+  background-size: 100% 305px;
   background-position: 0 top;
   background-repeat: no-repeat;
 }
@@ -32,4 +32,87 @@
 
 .head-block__button {
   width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .head-block {
+    padding-bottom: 533px;
+    background-image: url("../img/index-can-mobile@1x.png");
+    background-position: center 196px;
+    background-size: 74% 575px;
+  }
+
+  .head-block__wrapper {
+    padding-left: 90px;
+  }
+
+  .head-block__title,
+  .head-block__text {
+    color: $textdark;
+    text-align: left;
+  }
+
+  .head-block__title {
+    @include title-t;
+
+    width: 420px;
+    margin-bottom: 36px;
+  }
+
+  .head-block__text {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 36px;
+  }
+
+  .head-block__image {
+    display: none;
+  }
+
+  .head-block__button {
+    width: 246px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .head-block {
+    padding-top: 130px;
+    padding-bottom: 0;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-position: calc(100% + 70px) 0;
+    background-size: 680px 696px;
+  }
+
+  .head-block__wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    height: 600px;
+    padding-left: 80px;
+  }
+
+  .head-block__title {
+    order: 1;
+    margin-top: 95px;
+  }
+
+  .head-block__text {
+    order: 2;
+  }
+
+  .head-block__button {
+    order: 3;
+  }
+
+  .head-block__picture {
+    order: 4;
+  }
+
+  .head-block__image {
+    display: inline-block;
+    width: 552px;
+    height: 499px;
+  }
 }

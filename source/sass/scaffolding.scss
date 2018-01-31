@@ -29,7 +29,6 @@ body {
   font-size: 14px;
   line-height: 18px;
   color: $textcolor;
-  width: 320px;
   margin: 0 auto;
 }
 
@@ -82,5 +81,26 @@ a {
     &:active {
       color: rgba($color: $textcolor, $alpha: 0.3);
     }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  body {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .container {
+    @include pad-set(30px);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  body {
+    position: relative;
+  }
+
+  .container {
+    @include pad-set(40px);
   }
 }

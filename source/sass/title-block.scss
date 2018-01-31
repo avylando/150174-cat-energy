@@ -16,3 +16,28 @@
   margin-top: 22px;
   margin-bottom: 0;
 }
+
+@media (min-width: $tablet-width) {
+  .title-block {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+
+  .title-block__title {
+    @include title-t;
+  }
+
+  .title-block__text {
+    font-size: 20px;
+    line-height: 30px;
+    width: 380px;
+    padding-left: 40px;
+    margin-top: 47px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .title-block {
+    padding-top: 185px;
+  }
+}

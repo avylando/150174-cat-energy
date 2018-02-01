@@ -1,5 +1,5 @@
 .program {
-  padding: 20px;
+  padding: 21px;
   margin-top: 22px;
   background-color: $bg-grey;
 }
@@ -29,7 +29,7 @@
 
   &--pro {
     left: -9px;
-    bottom: 10px;
+    bottom: 13px;
   }
 }
 
@@ -40,21 +40,21 @@
   text-transform: uppercase;
   color: $textdark;
   width: calc(100% - 70px);
-  margin-top: 12px;
+  margin-top: 10px;
   margin-bottom: 12px;
 }
 
 .program__text {
   font-family: "Arial", sans-serif;
   width: 100%;
-  padding-bottom: 25px;
-  margin-top: 20px;
+  padding-bottom: 21px;
+  margin-top: 18px;
   margin-bottom: 0;
   border-bottom: 1px solid #d9d9d9;
 }
 
 .program__foot {
-  padding-top: 16px;
+  padding-top: 20px;
 }
 
 .program__link {
@@ -99,13 +99,20 @@
     height: 373px;
     padding-left: 52px;
     padding-right: 60px;
+    padding-top: 77px;
+    margin-top: 28px;
   }
 
   .program__wrapper {
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     height: 100%;
+  }
+  .program__title,
+  .program__text,
+  .program__foot {
+    width: calc(100% - 223px);
   }
 
   .program__title {
@@ -113,41 +120,42 @@
     font-size: 36px;
     line-height: 37px;
     margin-top: 0;
+    margin-bottom: 8px;
   }
 
   .program__text {
     order: 2;
     padding-bottom: 40px;
     border: none;
+
+    &--pro {
+      width: calc(100% - 253px);
+    }
   }
 
   .program__foot {
     order: 3;
   }
 
-  .program__title,
-  .program__text,
-  .program__foot {
-    width: calc(100% - 223px);
-  }
-
   .program__illustration {
     order: 4;
     width: 202px;
     height: 202px;
+    margin-left: auto;
+    margin-top: 15px;
   }
 
   .program__icon {
     &--slim {
       left: 30px;
-      bottom: 13px;
+      bottom: 16px;
       width: 69%;
       height: 100%;
     }
 
     &--pro {
       left: -35px;
-      bottom: 3px;
+      bottom: 1px;
       width: 133%;
       height: 100%;
     }
@@ -156,6 +164,7 @@
   .program__catalog {
     font-size: 20px;
     line-height: 20px;
+    padding-right: 25px;
   }
 }
 
@@ -163,8 +172,9 @@
   .program {
     width: 46.72%;
     height: auto;
-    padding-top: 45px;
-    padding-bottom: 60px;
+    padding-right: 52px;
+    padding-top: 48px;
+    padding-bottom: 62px;
   }
 
   .program__wrapper {
@@ -177,18 +187,21 @@
     order: 1;
     width: 100px;
     height: 100px;
+    margin-left: 0;
+    margin-top: 0;
   }
 
   .program__title {
     order: 2;
     width: calc(100% - 162px);
+    margin-bottom: 0;
   }
 
   .program__text {
     order: 3;
     width: 100%;
     padding-bottom: 32px;
-    margin-top: 38px;
+    margin-top: 40px;
   }
 
   .program__foot {

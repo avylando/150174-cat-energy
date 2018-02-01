@@ -1,13 +1,13 @@
 .instruction {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 18px;
+  padding-bottom: 22px;
 }
 
 .instruction__title {
   @include title;
 
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 27px;
 }
 
 .instruction__list {
@@ -40,7 +40,8 @@
 
 @media (min-width: $tablet-width) {
   .instruction {
-    padding-top: 50px;
+    padding-top: 47px;
+    padding-bottom: 46px;
   }
 
   .instruction__title {
@@ -53,19 +54,25 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    padding-right: 72px;
+    padding-right: 68px;
+
+    :nth-child(n+3) {
+      margin-bottom: 0;
+    }
   }
 
   .instruction__item {
     flex-wrap: wrap;
     align-items: flex-start;
-    width: 35.31%;
+    width: 40%;
     padding-bottom: 50px;
-    margin-bottom: 132px;
+    margin-bottom: 83px;
   }
 
   .instruction__illustration {
-    margin-bottom: 35px;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 34px;
   }
 
   .instruction__text {
@@ -75,7 +82,12 @@
 
 @media (min-width: $desktop-width) {
   .instruction {
+    padding-top: 73px;
     padding-bottom: 25px;
+  }
+
+  .instruction__list {
+    padding-right: 0;
   }
 
   .instruction__item {

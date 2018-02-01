@@ -5,6 +5,36 @@
   <meta charset="utf-8">
   <title>Кэт энерджи: Каталог продукции</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <!-- Pixel Glass -->
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* Mobile layout by default */
+      background-image: url("img/preview/cat-energy-catalog-mobile.jpg");
+    }
+
+    /* Tablet */
+
+    @media ( min-width: 768px) {
+      HTML {
+        /* Tablet layout */
+        background-image: url("img/preview/cat-energy-catalog-tablet.jpg");
+      }
+    }
+
+    /* Desktop */
+
+    @media ( min-width: 1300px) {
+      HTML {
+        /* Desktop layout */
+        background-image: url("img/preview/cat-energy-catalog-desktop.jpg");
+      }
+    }
+  </style>
+  <link href="js/pixel-glass/styles.css" rel="stylesheet">
+  <script src="js/pixel-glass/script.js"></script>
+  <!-- // Pixel Glass -->
 </head>
 
 <body>
@@ -17,9 +47,11 @@
     <div class="container">
       <div class="header__wrapper header__wrapper--nojs">
         <div class="header__top">
-          <svg class="header__logo" width="35" height="40">
+          <svg class="header__logo header__logo--mobile" width="35" height="40">
             <use xlink:href="#icon-logo-mobile"></use>
           </svg>
+          <img class="header__logo header__logo--tablet" src="img/logo-tablet.png" alt="logo" width="173" height="58">
+          <img class="header__logo header__logo--desktop" src="img/logo-desktop.png" alt="logo" width="202" height="59">
           <svg class="header__title-logo" width="103" height="20">
             <use xlink:href="#logo-mobile-header"></use>
           </svg>
@@ -349,7 +381,7 @@
     <div class="container">
       <div class="footer__wrapper">
         <div class="footer__block footer__block--logo">
-          <svg class="footer__logo" width="135" height="25">
+          <svg class="footer__logo" width="130" height="25">
             <use xlink:href="#logo-footer"></use>
           </svg>
         </div>
@@ -410,6 +442,7 @@
       myMap.geoObjects.add(myPlacemark);
     }
   </script>
+  <script src="js/picturefill.min.js"></script>
   <script src="js/svg4everybody.min.js"></script>
   <script>svg4everybody(); // run it now or whenever you are ready</script>
   <script src="js/toggle.js"></script>

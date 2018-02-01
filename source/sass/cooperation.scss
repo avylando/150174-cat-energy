@@ -7,8 +7,8 @@
 }
 
 .cooperation__inner {
-  padding-top: 26px;
-  padding-bottom: 20px;
+  padding-top: 28px;
+  padding-bottom: 26px;
   display: flex;
   justify-content: space-between;
 }
@@ -44,8 +44,8 @@
 
 @media (min-width: $tablet-width) {
   .cooperation__inner {
-    padding-top: 65px;
-    padding-bottom: 62px;
+    padding-top: 63px;
+    padding-bottom: 59px;
 
     @include pad-set(41px);
   }
@@ -62,7 +62,11 @@
   }
 
   .cooperation__street {
-    margin-bottom: 15px;
+    margin-bottom: 19px;
+  }
+
+  .cooperation__map {
+    height: 396px;
   }
 }
 

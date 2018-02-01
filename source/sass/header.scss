@@ -6,18 +6,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
-  padding-bottom: 18px;
+  padding-top: 12px;
+  padding-bottom: 13px;
   // border-bottom: 1px solid $header-border;
-
 }
 
 .header__logo {
   width: 35px;
+
+  &--tablet,
+  &--desktop {
+    display: none;
+  }
 }
 
 .header__title-logo {
   width: 103px;
+  margin-right: 10px;
 }
 
 .header__burger {
@@ -134,7 +139,7 @@
 
 @media (min-width: $tablet-width) {
   .header {
-    padding-top: 18px;
+    padding-top: 20px;
     border: none;
   }
 
@@ -168,7 +173,19 @@
   }
 
   .header__logo {
-    margin-right: 21px;
+    width: 173px;
+
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+    }
+  }
+
+  .header__title-logo {
+    display: none;
   }
 
   .header__nav {
@@ -199,7 +216,17 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding-top: 25px;
+    padding-top: 51px;
+  }
+
+  .header__logo {
+    &--tablet {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+    }
   }
 
   .header__menu {

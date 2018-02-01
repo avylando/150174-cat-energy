@@ -1,7 +1,7 @@
 .add-list {
   @include list-unstyle;
 
-  margin-top: 20px;
+  margin-top: 14px;
 }
 
 .add-list__input {
@@ -15,6 +15,8 @@
 .add-list__label {
   position: relative;
   display: inline-block;
+  font-size: 16px;
+  line-height: 18px;
   text-transform: uppercase;
   color: $textdark;
   padding-left: 45px;
@@ -47,12 +49,13 @@
   .add-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     align-items: flex-start;
-    margin-top: 24px;
+    margin-top: 39px;
   }
 
   .add-list__item {
-    width: 50%;
+    width: 46%;
     margin-bottom: 32px;
   }
 

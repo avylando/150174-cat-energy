@@ -216,7 +216,17 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding-top: 25px;
+    padding-top: 51px;
+  }
+
+  .header__logo {
+    &--tablet {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+    }
   }
 
   .header__menu {

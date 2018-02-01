@@ -51,6 +51,8 @@
 @media (min-width: $tablet-width) {
   .product {
     padding-bottom: 40px;
+    padding-left: 38px;
+    padding-right: 37px;
     margin-left: 0;
     margin-right: 0;
     background-image: linear-gradient(to bottom, transparent 0, transparent 81px, $bg-grey 81px, $bg-grey 100%);
@@ -69,6 +71,10 @@
   .product__illustration {
     text-align: center;
     width: 100%;
+  }
+
+  .product__image {
+    height: 208px;
   }
 
   .product__description {

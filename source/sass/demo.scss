@@ -178,17 +178,30 @@
 
 @media (min-width: $tablet-width) {
   .demo {
-    padding-top: 50px;
+    position: relative;
+    padding-top: 44px;
+    padding-bottom: 65px;
     border-top: 1px solid $header-border;
     background-color: transparent;
   }
 
+  .demo__inner {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 462px;
+    background-image: linear-gradient(to right, $bg-grey 0, $bg-grey 50%, $bg-darkgrey 50%, $bg-darkgrey 100%);
+  }
+
   .demo__title {
     font-size: 60px;
-    margin-bottom: 62px;
+    margin-bottom: 65px;
   }
 
   .demo__text {
+    width: 97%;
     margin-bottom: 52px;
   }
 
@@ -205,6 +218,7 @@
 
   .demo__stats-item {
     width: 162px;
+    padding-bottom: 19px;
 
     &--weight {
       .demo__stats-subtitle {
@@ -227,6 +241,8 @@
   }
 
   .demo__stats-subtitle {
+    font-size: 14px;
+    line-height: 14px;
     bottom: -6px;
     background-color: #ffffff;
   }
@@ -240,12 +256,7 @@
   }
 
   .demo__progress {
-    @include pad-reset(30px);
-    @include pad-set(30px);
-
-    padding-bottom: 64px;
     margin-top: 80px;
-    background-image: linear-gradient(to bottom, transparent 0, transparent 173px, $bg-grey 173px, $bg-grey 100%);
 
     .demo__progress-toggle {
       transform: translateX(-50%);
@@ -264,8 +275,8 @@
 
   .demo__image-wrapper {
     position: relative;
-    width: 602px;
-    height: 462px;
+    width: 610px;
+    height: 521px;
     margin: 0 auto;
   }
 
@@ -282,11 +293,13 @@
       width: 50%;
       z-index: 20;
       background-image: url("../img/before-mobile@1x.png");
+      background-position: -33px 4px;
     }
 
     &--after {
       z-index: 10;
       background-image: url("../img/after-mobile@1x.png");
+      background-position: -34px 4px;
     }
   }
 
@@ -295,10 +308,8 @@
   // }
 
   .demo__buttons-block {
-    @include pad-set(20px);
-
-    width: 602px;
-    margin: 0 auto;
+    width: 570px;
+    margin: 13px auto 0;
   }
 
   .demo__progress-bar {
@@ -337,15 +348,22 @@
   .demo__progress-button {
     font-size: 20px;
     line-height: 20px;
+    width: auto;
+    padding: 7px 0;
+    border-bottom: 1px dotted #bebebe;
   }
 }
 
 @media (min-width: $desktop-width) {
   .demo {
     padding-top: 0;
-    padding-bottom: 70px;
+    padding-bottom: 48px;
     border: none;
-    background-image: linear-gradient(to bottom, transparent 0, transparent 190px, $bg-grey 190px, $bg-grey 100%);
+  }
+
+  .demo__inner {
+    height: 485px;
+    background-image: linear-gradient(to right, $bg-grey 0, $bg-grey calc(100% - 325px), $bg-darkgrey calc(100% - 325px), $bg-darkgrey 100%);
   }
 
   .demo__wrapper {
@@ -360,12 +378,12 @@
   .demo__title,
   .demo__text,
   .demo__stats {
-    width: 440px;
+    width: 435px;
   }
 
   .demo__title {
-    margin-top: 57px;
-    margin-bottom: 140px;
+    margin-top: 51px;
+    margin-bottom: 145px;
   }
 
   .demo__text {
@@ -377,10 +395,11 @@
   }
 
   .demo__stats-item {
-    margin-bottom: 60px;
+    margin-bottom: 53px;
   }
 
   .demo__stats-subtitle {
+    bottom: -5px;
     background-color: $bg-grey;
   }
 
@@ -393,8 +412,8 @@
 
   .demo__progress {
     width: 610px;
+    margin-left: auto;
     margin-top: 0;
-    background-image: none;
   }
 
   .demo__image-wrapper {
@@ -402,6 +421,6 @@
   }
 
   .demo__buttons-block {
-    margin-top: 20px;
+    margin: 15px 0 0 auto;
   }
 }

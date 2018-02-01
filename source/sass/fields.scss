@@ -153,13 +153,14 @@
   .fields {
     padding-left: 40px;
     padding-right: 35px;
+    padding-top: 6px;
     padding-bottom: 72px;
   }
 
   .fields__head {
     &::before {
-      width: 120%;
-      top: 40px;
+      width: 200%;
+      top: 42px;
       right: -65px;
     }
   }
@@ -175,23 +176,33 @@
   .fields__set {
     margin-bottom: 70px;
 
+    &--personal {
+      padding-bottom: 0;
+    }
+
     &--program {
       padding-left: 27px;
       margin-left: 0;
       margin-right: -65px;
+      margin-bottom: 49px;
       border-right: none;
     }
 
     &--contacts {
-      margin-bottom: 20px;
+      margin-bottom: 26px;
 
       .fields__title {
-        margin-bottom: 72px;
+        margin-bottom: 43px;
       }
     }
 
+    &--descr {
+      margin-bottom: 34px;
+    }
+
     &--add {
-      margin-bottom: 20px;
+      padding-bottom: 24px;
+      margin-bottom: 0;
     }
   }
 
@@ -208,7 +219,11 @@
 
   .fields__textfield,
   .fields__textarea {
-    padding: 10px 20px;
+    padding: 10px 18px;
+  }
+
+  .fields__textfield {
+    margin-left: 18px;
   }
 
   .fields__contact-icon {
@@ -225,8 +240,8 @@
 
   .fields__textarea {
     line-height: 30px;
-    height: 172px;
-    margin-top: 72px;
+    height: 174px;
+    margin-top: 57px;
   }
 
   .fields__button-block {
@@ -235,8 +250,11 @@
   }
 
   .fields__button {
+    font-size: 20px;
     width: 284px;
-    margin-right: 60px;
+    padding-top: 17px;
+    padding-bottom: 16px;
+    margin-right: 50px;
     margin-bottom: 0;
   }
 
@@ -246,6 +264,13 @@
 }
 
 @media (min-width: $desktop-width) {
+  .fields {
+    @include pad-set(0);
+
+    padding-bottom: 82px;
+    overflow-x: hidden;
+  }
+
   .fields__wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -265,6 +290,10 @@
       width: 100%;
     }
 
+    &--personal {
+      margin-bottom: 41px;
+    }
+
     &--program {
       margin: 0;
       border: 1px solid #ededed;
@@ -273,7 +302,12 @@
     &--contacts {
       .fields__block {
         width: 46.72%;
+        margin-bottom: 0;
       }
+    }
+
+    &--add {
+      padding-bottom: 31px;
     }
   }
 
@@ -281,15 +315,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 11px;
+  }
+
+  .fields__textfield,
+  .fields__textarea {
+    padding: 11px 18px;
   }
 
   .fields__textarea {
-    padding-top: 14px;
+    height: 173px;
   }
 
   .fields__button {
     width: 570px;
-    margin-right: 80px;
+    margin-right: 47px;
   }
 
   .fields__note {

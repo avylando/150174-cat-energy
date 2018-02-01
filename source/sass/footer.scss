@@ -33,7 +33,7 @@
 
 @media (min-width: $tablet-width) {
   .footer {
-    padding-top: 63px;
+    padding-top: 58px;
     padding-bottom: 47px;
   }
 
@@ -54,6 +54,7 @@
     &--copyright {
       justify-content: flex-end;
       width: 22.88%;
+      padding-top: 6px;
     }
 
     &--social {
@@ -62,12 +63,15 @@
   }
 
   .footer__developer {
+    margin: 0;
     margin-right: 20px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .footer__block {
-
+    &--copyright {
+      padding-top: 0;
+    }
   }
 }

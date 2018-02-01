@@ -19,7 +19,7 @@
 
 @media (min-width: $tablet-width) {
   .title-block {
-    padding-top: 50px;
+    padding-top: 52px;
     padding-bottom: 60px;
   }
 
@@ -32,12 +32,16 @@
     line-height: 30px;
     width: 380px;
     padding-left: 40px;
-    margin-top: 47px;
+    margin-top: 54px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .title-block {
-    padding-top: 185px;
+    padding-top: 188px;
+  }
+
+  .title-block__text {
+    padding-left: 0;
   }
 }

@@ -6,9 +6,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 12px;
-  padding-bottom: 13px;
-  // border-bottom: 1px solid $header-border;
+  padding-top: 11px;
+  padding-bottom: 11px;
 }
 
 .header__logo {
@@ -220,6 +219,8 @@
   }
 
   .header__logo {
+    width: 202px;
+
     &--tablet {
       display: none;
     }

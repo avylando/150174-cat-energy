@@ -67,6 +67,47 @@
     width: 40%;
     padding-bottom: 50px;
     margin-bottom: 83px;
+    background-repeat: no-repeat;
+
+    &--1 {
+      background-image: url("../img/1@1x.png");
+      background-size: 71px 228px;
+      background-position: 127px 0;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/1@2x.png");
+      }
+    }
+
+    &--2 {
+      background-image: url("../img/2@1x.png");
+      background-size: 114px 228px;
+      background-position: 123px 0;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/2@2x.png");
+      }
+    }
+
+    &--3 {
+      background-image: url("../img/3@1x.png");
+      background-size: 113px 228px;
+      background-position: 123px 0;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/3@2x.png");
+      }
+    }
+
+    &--4 {
+      background-image: url("../img/4@1x.png");
+      background-size: 121px 228px;
+      background-position: right 0;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/4@2x.png");
+      }
+    }
   }
 
   .instruction__illustration {

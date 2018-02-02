@@ -97,11 +97,19 @@
     background-image: url("../img/before-mobile@1x.png");
     background-size: 114% 100%;
     background-position: -19px -6px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/before-mobile@2x.png");
+    }
   }
 
   &--after {
     background-image: url("../img/after-mobile@1x.png");
     background-position: -19px 0px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/after-mobile@2x.png");
+    }
   }
 }
 
@@ -288,24 +296,28 @@
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: -33px 0;
 
     &--before {
       width: 50%;
       z-index: 20;
-      background-image: url("../img/before-mobile@1x.png");
-      background-position: -33px 4px;
+      background-image: url("../img/before-tablet@1x.png"), linear-gradient(to bottom, #ffffff 0, #ffffff 175px, $bg-grey 175px, $bg-grey 100%);
+
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/before-tablet@2x.png"), linear-gradient(to bottom, #ffffff 0, #ffffff 175px, $bg-grey 175px, $bg-grey 100%);
+      }
     }
 
     &--after {
       z-index: 10;
-      background-image: url("../img/after-mobile@1x.png");
-      background-position: -34px 4px;
+      background-image: url("../img/after-tablet@1x.png"), linear-gradient(to bottom, #ffffff 0, #ffffff 175px, $bg-darkgrey  175px, $bg-darkgrey  100%);
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/after-tablet@2x.png"), linear-gradient(to bottom, #ffffff 0, #ffffff 175px, $bg-darkgrey  175px, $bg-darkgrey 100%);
+      }
     }
   }
-
-  // .demo__image {
-  //   display: none;
-  // }
 
   .demo__buttons-block {
     width: 570px;
@@ -362,7 +374,7 @@
   }
 
   .demo__inner {
-    height: 485px;
+    height: 463px;
     background-image: linear-gradient(to right, $bg-grey 0, $bg-grey calc(100% - 325px), $bg-darkgrey calc(100% - 325px), $bg-darkgrey 100%);
   }
 
@@ -420,7 +432,29 @@
     height: 536px;
   }
 
+  .demo__illustration {
+    background-size: 690px 517px;
+    background-position: -41px 0;
+
+    &--before {
+      width: 53%;
+      background-image: url("../img/before-desktop@1x.png"), linear-gradient(to bottom, #ffffff 0, #ffffff 185px, $bg-grey 167px, $bg-grey 100%);;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/before-desktop@2x.png"), linear-gradient(to bottom, #ffffff 0, #ffffff 185px, $bg-grey 167px, $bg-grey 100%);;
+      }
+    }
+
+    &--after {
+      background-image: url("../img/after-desktop@1x.png"), linear-gradient(to bottom, #ffffff 0, #ffffff 185px, $bg-darkgrey  167px, $bg-darkgrey  100%);
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/after-desktop@2x.png"), linear-gradient(to bottom, #ffffff 0, #ffffff 185px, $bg-darkgrey  167px, $bg-darkgrey  100%);
+      }
+    }
+  }
+
   .demo__buttons-block {
-    margin: 15px 0 0 auto;
+    margin: 9px 0 0 auto;
   }
 }

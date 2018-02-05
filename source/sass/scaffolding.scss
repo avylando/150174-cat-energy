@@ -29,7 +29,7 @@ body {
   font-size: 14px;
   line-height: 18px;
   color: $textcolor;
-  margin: 0 auto;
+  overflow-x: hidden;
 }
 
 img {
@@ -39,6 +39,16 @@ img {
 
 a {
   text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
 }
 
 .container {

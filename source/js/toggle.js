@@ -39,55 +39,55 @@
       }
     })
 
-    if (docWidth >= tabletWidth) {
-      var imgBefore = progress.querySelector('.demo__illustration--before');
-      var scale = progress.querySelector('.demo__progress-bar');
-      var toggle = scale.querySelector('.demo__progress-toggle');
+    // if (docWidth >= tabletWidth) {
+    //   var imgBefore = progress.querySelector('.demo__illustration--before');
+    //   var scale = progress.querySelector('.demo__progress-bar');
+    //   var toggle = scale.querySelector('.demo__progress-toggle');
 
-      var scaleWidth = 427;
-      var percentScale = 4.27;
-      var minScaleValue = 0;
-      var maxScaleValue = 100;
+    //   var scaleWidth = 427;
+    //   var percentScale = 4.27;
+    //   var minScaleValue = 0;
+    //   var maxScaleValue = 100;
 
-      toggle.addEventListener('mousedown', function (evt) {
-        evt.preventDefault();
+    //   toggle.addEventListener('mousedown', function (evt) {
+    //     evt.preventDefault();
 
-        var startCoords = {
-          x: evt.clientX
-        }
+    //     var startCoords = {
+    //       x: evt.clientX
+    //     }
 
-        var pinMouseMoveHandler = function (moveEvt) {
-          moveEvt.preventDefault();
+    //     var pinMouseMoveHandler = function (moveEvt) {
+    //       moveEvt.preventDefault();
 
-          var shift = {
-            x: startCoords.x - moveEvt.clientX
-          };
+    //       var shift = {
+    //         x: startCoords.x - moveEvt.clientX
+    //       };
 
-          startCoords = {
-            x: moveEvt.clientX
-          };
+    //       startCoords = {
+    //         x: moveEvt.clientX
+    //       };
 
-          toggle.style.left = ((toggle.offsetLeft - shift.x) / percentScale) + '%';
-          imgBefore.style.width = (100 - Math.floor((toggle.offsetLeft - shift.x) / percentScale)) + '%';
+    //       toggle.style.left = ((toggle.offsetLeft - shift.x) / percentScale) + '%';
+    //       imgBefore.style.width = (100 - Math.floor((toggle.offsetLeft - shift.x) / percentScale)) + '%';
 
-          var toggleOffsetPercent = parseInt(toggle.style.left, 10);
+    //       var toggleOffsetPercent = parseInt(toggle.style.left, 10);
 
-          if (toggleOffsetPercent <= minScaleValue) {
-            toggle.style.left = minScaleValue + '%';
-          } else if (toggleOffsetPercent >= maxScaleValue) {
-            toggle.style.left = maxScaleValue + '%';
-          }
-        }
+    //       if (toggleOffsetPercent <= minScaleValue) {
+    //         toggle.style.left = minScaleValue + '%';
+    //       } else if (toggleOffsetPercent >= maxScaleValue) {
+    //         toggle.style.left = maxScaleValue + '%';
+    //       }
+    //     }
 
-        var pinMouseUpHandler = function () {
-          document.removeEventListener('mousemove', pinMouseMoveHandler);
-          document.removeEventListener('mouseup', pinMouseUpHandler);
-        }
+    //     var pinMouseUpHandler = function () {
+    //       document.removeEventListener('mousemove', pinMouseMoveHandler);
+    //       document.removeEventListener('mouseup', pinMouseUpHandler);
+    //     }
 
-        document.addEventListener('mousemove', pinMouseMoveHandler);
-        document.addEventListener('mouseup', pinMouseUpHandler);
-      })
-    }
+    //     document.addEventListener('mousemove', pinMouseMoveHandler);
+    //     document.addEventListener('mouseup', pinMouseUpHandler);
+    //   })
+    // }
   }
 
 

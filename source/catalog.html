@@ -3,38 +3,11 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Кэт энерджи: Каталог продукции</title>
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.min.css">
-  <!-- Pixel Glass -->
-  <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      /* Mobile layout by default */
-      background-image: url("img/preview/cat-energy-catalog-mobile.jpg");
-    }
-
-    /* Tablet */
-
-    @media ( min-width: 768px) {
-      HTML {
-        /* Tablet layout */
-        background-image: url("img/preview/cat-energy-catalog-tablet.jpg");
-      }
-    }
-
-    /* Desktop */
-
-    @media ( min-width: 1300px) {
-      HTML {
-        /* Desktop layout */
-        background-image: url("img/preview/cat-energy-catalog-desktop.jpg");
-      }
-    }
-  </style>
-  <link href="js/pixel-glass/styles.css" rel="stylesheet">
-  <script src="js/pixel-glass/script.js"></script>
-  <!-- // Pixel Glass -->
 </head>
 
 <body>
@@ -47,11 +20,18 @@
     <div class="container">
       <div class="header__wrapper header__wrapper--nojs">
         <div class="header__top">
-          <svg class="header__logo header__logo--mobile" width="35" height="40">
-            <use xlink:href="#icon-logo-mobile"></use>
-          </svg>
-          <img class="header__logo header__logo--tablet" src="img/logo-tablet.png" alt="logo" width="173" height="58">
-          <img class="header__logo header__logo--desktop" src="img/logo-desktop.png" alt="logo" width="202" height="59">
+          <a class="header__link" href="index.html">
+            <h3 class="visually-hidden">Cat Energy</h3>
+            <svg class="header__logo header__logo--mobile" width="35" height="40">
+              <use xlink:href="#icon-logo-mobile"></use>
+            </svg>
+            <svg class="header__logo header__logo--tablet" width="173" height="58">
+              <use xlink:href="#logo-tablet"></use>
+            </svg>
+            <svg class="header__logo header__logo--desktop" width="202" height="59">
+              <use xlink:href="#logo-desktop"></use>
+            </svg>
+          </a>
           <svg class="header__title-logo" width="103" height="20">
             <use xlink:href="#logo-mobile-header"></use>
           </svg>
@@ -96,13 +76,23 @@
     </section>
 
     <section class="catalog">
+      <h2 class="visually-hidden">Основные товары</h2>
       <div class="container">
         <div class="catalog__wrapper">
 
           <article class="catalog__item product">
             <div class="product__wrapper">
               <div class="product__illustration">
-                <img class="product__image" src="img/chicken-small-mobile@1x.jpg" alt="chicken-small" width="140" height="144">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/chicken-small-desktop@1x.webp 1x, img/chicken-small-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 780px)" srcset="img/chicken-small-tablet@1x.webp 1x, img/chicken-small-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/chicken-small-mobile@1x.webp 1x, img/chicken-small-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1300px)" srcset="img/chicken-small-desktop@1x.png 1x, img/chicken-small-desktop@2x.png 2x">
+                  <source media="(min-width: 780px)" srcset="img/chicken-small-tablet@1x.png 1x, img/chicken-small-tablet@2x.png 2x">
+                  <img class="product__image product__image--small" src="img/chicken-small-mobile@1x.jpg" srcset="img/chicken-small-mobile@2x.jpg 2x"
+                    alt="chicken-small" width="140" height="144">
+                </picture>
               </div>
               <div class="product__description">
                 <h2 class="product__title">Cat Energy PRO 500 г</h2>
@@ -128,7 +118,16 @@
           <article class="catalog__item product">
             <div class="product__wrapper">
               <div class="product__illustration">
-                <img class="product__image" src="img/chicken-big-mobile@1x.jpg" alt="chicken-big" width="140" height="144">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/chicken-big-desktop@1x.webp 1x, img/chicken-big-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 780px)" srcset="img/chicken-big-tablet@1x.webp 1x, img/chicken-big-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/chicken-big-mobile@1x.webp 1x, img/chicken-big-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1300px)" srcset="img/chicken-big-desktop@1x.png 1x, img/chicken-big-desktop@2x.png 2x">
+                  <source media="(min-width: 780px)" srcset="img/chicken-big-tablet@1x.png 1x, img/chicken-big-tablet@2x.png 2x">
+                  <img class="product__image product__image--big" src="img/chicken-big-mobile@1x.jpg" srcset="img/chicken-big-mobile@2x.jpg 2x"
+                    alt="chicken-big" width="140" height="144">
+                </picture>
               </div>
               <div class="product__description">
                 <h2 class="product__title">Cat Energy PRO 1000 г</h2>
@@ -154,7 +153,16 @@
           <article class="catalog__item product">
             <div class="product__wrapper">
               <div class="product__illustration">
-                <img class="product__image" src="img/fish-small-mobile@1x.jpg" alt="fish-small" width="140" height="144">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/fish-small-desktop@1x.webp 1x, img/fish-small-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 780px)" srcset="img/fish-small-tablet@1x.webp 1x, img/fish-small-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/fish-small-mobile@1x.webp 1x, img/fish-small-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1300px)" srcset="img/fish-small-desktop@1x.png 1x, img/fish-small-desktop@2x.png 2x">
+                  <source media="(min-width: 780px)" srcset="img/fish-small-tablet@1x.png 1x, img/fish-small-tablet@2x.png 2x">
+                  <img class="product__image product__image--small" src="img/fish-small-mobile@1x.jpg" srcset="img/fish-small-mobile@2x.jpg 2x"
+                    alt="fish-small" width="140" height="144">
+                </picture>
               </div>
               <div class="product__description">
                 <h2 class="product__title">Cat Energy PRO 500 г</h2>
@@ -180,7 +188,16 @@
           <article class="catalog__item product">
             <div class="product__wrapper">
               <div class="product__illustration">
-                <img class="product__image" src="img/fish-big-mobile@1x.jpg" alt="fish-big" width="140" height="144">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/fish-big-desktop@1x.webp 1x, img/fish-big-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 780px)" srcset="img/fish-big-tablet@1x.webp 1x, img/fish-big-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/fish-big-mobile@1x.webp 1x, img/fish-big-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1300px)" srcset="img/fish-big-desktop@1x.png 1x, img/fish-big-desktop@2x.png 2x">
+                  <source media="(min-width: 780px)" srcset="img/fish-big-tablet@1x.png 1x, img/fish-big-tablet@2x.png 2x">
+                  <img class="product__image product__image--big" src="img/fish-big-mobile@1x.jpg" srcset="img/fish-big-mobile@2x.jpg 2x" alt="fish-big"
+                    width="140" height="144">
+                </picture>
               </div>
               <div class="product__description">
                 <h2 class="product__title">Cat Energy PRO 1000 г</h2>
@@ -206,7 +223,16 @@
           <article class="catalog__item product">
             <div class="product__wrapper">
               <div class="product__illustration">
-                <img class="product__image" src="img/buckwheat-small-mobile@1x.jpg" alt="buckwheat-small" width="140" height="144">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/buckwheat-small-desktop@1x.webp 1x, img/buckwheat-small-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 780px)" srcset="img/buckwheat-small-tablet@1x.webp 1x, img/buckwheat-small-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/buckwheat-small-mobile@1x.webp 1x, img/buckwheat-small-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1300px)" srcset="img/buckwheat-small-desktop@1x.png 1x, img/buckwheat-small-desktop@2x.png 2x">
+                  <source media="(min-width: 780px)" srcset="img/buckwheat-small-tablet@1x.png 1x, img/buckwheat-small-tablet@2x.png 2x">
+                  <img class="product__image product__image--small" src="img/buckwheat-small-mobile@1x.jpg" srcset="img/buckwheat-small-mobile@2x.jpg 2x"
+                    alt="buckwheat-small" width="140" height="144">
+                </picture>
               </div>
               <div class="product__description">
                 <h2 class="product__title">Cat Energy Slim 500 г</h2>
@@ -232,7 +258,16 @@
           <article class="catalog__item product">
             <div class="product__wrapper">
               <div class="product__illustration">
-                <img class="product__image" src="img/buckwheat-big-mobile@1x.jpg" alt="buckwheat-big" width="140" height="144">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/buckwheat-big-desktop@1x.webp 1x, img/buckwheat-big-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 780px)" srcset="img/buckwheat-big-tablet@1x.webp 1x, img/buckwheat-big-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/buckwheat-big-mobile@1x.webp 1x, img/buckwheat-big-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1300px)" srcset="img/buckwheat-big-desktop@1x.png 1x, img/buckwheat-big-desktop@2x.png 2x">
+                  <source media="(min-width: 780px)" srcset="img/buckwheat-big-tablet@1x.png 1x, img/buckwheat-big-tablet@2x.png 2x">
+                  <img class="product__image product__image--big" src="img/buckwheat-big-mobile@1x.jpg" srcset="img/buckwheat-big-mobile@2x.jpg 2x"
+                    alt="buckwheat-big" width="140" height="144">
+                </picture>
               </div>
               <div class="product__description">
                 <h2 class="product__title">Cat Energy Slim 1000 г</h2>
@@ -258,7 +293,16 @@
           <article class="catalog__item product">
             <div class="product__wrapper">
               <div class="product__illustration">
-                <img class="product__image" src="img/rice-small-mobile@1x.jpg" alt="rice-small" width="140" height="144">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/rice-small-desktop@1x.webp 1x, img/rice-small-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 780px)" srcset="img/rice-small-tablet@1x.webp 1x, img/rice-small-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/rice-small-mobile@1x.webp 1x, img/rice-small-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1300px)" srcset="img/rice-small-desktop@1x.png 1x, img/rice-small-desktop@2x.png 2x">
+                  <source media="(min-width: 780px)" srcset="img/rice-small-tablet@1x.png 1x, img/rice-small-tablet@2x.png 2x">
+                  <img class="product__image product__image--small" src="img/rice-small-mobile@1x.jpg" srcset="img/rice-small-mobile@2x.jpg 2x"
+                    alt="rice-small" width="140" height="144">
+                </picture>
               </div>
               <div class="product__description">
                 <h2 class="product__title">Cat Energy Slim 500 г</h2>
@@ -318,7 +362,7 @@
                 <table class="add-product__options">
                   <tr>
                     <td class="add-product__options-cell add-product__options-cell--quantity">5 литров</td>
-                    <td class="add-product__options-cell add-product__options-cell--price">500 Р.</td>
+                    <td class="add-product__options-cell add-product__options-cell--price">50 Р.</td>
                   </tr>
                 </table>
                 <a href="#" class="add-product__button button">Заказать</a>
@@ -381,14 +425,18 @@
     <div class="container">
       <div class="footer__wrapper">
         <div class="footer__block footer__block--logo">
-          <svg class="footer__logo" width="130" height="25">
-            <use xlink:href="#logo-footer"></use>
-          </svg>
+          <a href="index.html" class="footer__logo-link">
+            <h3 class="visually-hidden">Cat Energy</h3>
+            <svg class="footer__logo" width="130" height="25">
+              <use xlink:href="#logo-footer"></use>
+            </svg>
+          </a>
         </div>
         <div class="footer__block footer__block--social">
           <ul class="footer__list social-list">
             <li class="social-list__item">
               <a href="" class="social-list__link">
+                <h3 class="visually-hidden">Мы Вконтакте</h3>
                 <svg class="social-list__icon social-list__icon--vk" width="22" height="12">
                   <use xlink:href="#icon-vk-mobile"></use>
                 </svg>
@@ -396,6 +444,7 @@
             </li>
             <li class="social-list__item">
               <a href="" class="social-list__link">
+                <h3 class="visually-hidden">Мы в Инстаграме</h3>
                 <svg class="social-list__icon social-list__icon--inst" width="16" height="16">
                   <use xlink:href="#icon-insta-mobile"></use>
                 </svg>
@@ -403,6 +452,7 @@
             </li>
             <li class="social-list__item">
               <a href="" class="social-list__link">
+                <h3 class="visually-hidden">Мы в Фейсбуке</h3>
                 <svg class="social-list__icon social-list__icon--fb" width="10" height="19">
                   <use xlink:href="#icon-fb-mobile"></use>
                 </svg>
@@ -411,40 +461,84 @@
           </ul>
         </div>
         <div class="footer__block footer__block--copyright">
-          <h3 class="footer__developer">HTML Academy</h3>
-          <svg class="footer__developer-icon" width="27" height="34">
-            <use xlink:href="#logo-htmlacademy"></use>
-          </svg>
+          <a class="footer__developer-link" href="https://htmlacademy.ru/intensive/adaptive">
+            <h3 class="footer__developer">HTML Academy</h3>
+            <svg class="footer__developer-icon" width="27" height="34">
+              <use xlink:href="#logo-htmlacademy"></use>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
   </footer>
 
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU">
+
+
   </script>
-  <script type="text/javascript">
+  <script>
     ymaps.ready(init);
     var myMap;
 
     function init() {
-      myMap = new ymaps.Map("map", {
-        center: [59.938631, 30.323055],
-        zoom: 17
-      });
+      if (document.body.clientWidth < 768) {
+        myMap = new ymaps.Map("map", {
+          center: [59.938631, 30.323055],
+          zoom: 17
+        });
 
-      var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
-        iconLayout: 'default#image',
-        iconImageHref: 'img/map-pin.png',
-        iconImageSize: [50, 53],
-        iconImageOffset: [-25, -53]
-      });
+        myMap.behaviors.disable('scrollZoom');
 
-      myMap.geoObjects.add(myPlacemark);
+        var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
+          iconLayout: 'default#image',
+          iconImageHref: 'img/map-pin.png',
+          iconImageSize: [72, 53],
+          iconImageOffset: [-36, -53]
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+      } else if (document.body.clientWidth >= 768 && document.body.clientWidth < 1300) {
+        myMap = new ymaps.Map("map", {
+          center: [59.938631, 30.323055],
+          zoom: 17
+        });
+
+        myMap.behaviors.disable('scrollZoom');
+
+        var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
+          iconLayout: 'default#image',
+          iconImageHref: 'img/map-pin.png',
+          iconImageSize: [72, 53],
+          iconImageOffset: [-36, -53]
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+      } else if (document.body.clientWidth >= 1300) {
+        myMap = new ymaps.Map("map", {
+          center: [59.938963, 30.319293],
+          zoom: 17
+        });
+
+        myMap.behaviors.disable('scrollZoom');
+
+        var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
+          iconLayout: 'default#image',
+          iconImageHref: 'img/map-pin.png',
+          iconImageSize: [124, 106],
+          iconImageOffset: [-72, -106]
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+      }
     }
+
   </script>
   <script src="js/picturefill.min.js"></script>
   <script src="js/svg4everybody.min.js"></script>
-  <script>svg4everybody(); // run it now or whenever you are ready</script>
+  <script>
+    svg4everybody(); // run it now or whenever you are ready
+
+  </script>
   <script src="js/toggle.js"></script>
 
 </body>

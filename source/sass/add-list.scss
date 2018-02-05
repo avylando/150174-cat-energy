@@ -42,7 +42,7 @@
   background-image: url("../img/icon-tick.svg");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 75%;
+  background-size: 70%;
 }
 
 @media (min-width: $tablet-width) {
@@ -55,7 +55,7 @@
   }
 
   .add-list__item {
-    width: 46%;
+    width: 45.6%;
     margin-bottom: 32px;
   }
 
@@ -70,6 +70,10 @@
       width: 40px;
       height: 40px;
     }
+  }
+
+  .add-list__input:checked + .add-list__label::before {
+    background-size: 60%;
   }
 }
 

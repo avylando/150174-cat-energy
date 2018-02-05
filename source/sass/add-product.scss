@@ -1,5 +1,5 @@
 .add-product {
-  padding-top: 15px;
+  padding-top: 13px;
   padding-bottom: 19px;
   border-bottom: 1px solid #cdcdcd;
 }
@@ -9,7 +9,7 @@
 
   line-height: 16px;
   margin-top: 0;
-  margin-bottom: 12px;
+  margin-bottom: 11px;
 }
 
 .add-product__options {
@@ -18,9 +18,15 @@
   line-height: 14px;
   width: 100%;
   margin-bottom: 12px;
+  border-spacing: 0;
 }
 
 .add-product__options-cell {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 2px;
+  padding-bottom: 2px;
+
   &--quantity {
     text-align: left;
   }
@@ -42,7 +48,7 @@
     padding-left: 38px;
     padding-right: 37px;
     padding-top: 25px;
-    padding-bottom: 27px;
+    padding-bottom: 29px;
   }
 
   .add-product__title {
@@ -56,6 +62,7 @@
     font-size: 16px;
     line-height: 20px;
     width: 40%;
+    margin-top: 2px;
   }
 
   .add-product__options-cell {
@@ -80,19 +87,35 @@
 @media (min-width: $desktop-width) {
   .add-product {
     flex-wrap: nowrap;
+    justify-content: flex-start;
     align-items: center;
-    padding-top: 15px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 16px;
     padding-bottom: 16px;
+
+    &:first-child {
+      border-top: 1px solid #cdcdcd;
+    }
   }
 
   .add-product__title {
     width: 245px;
     margin: 0;
+    margin-right: 81px;
   }
 
   .add-product__options {
     width: 285px;
-    margin: 0;
+    margin-right: 39px;
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+
+  .add-product__options-cell {
+    &--quantity {
+      text-align: left;
+    }
   }
 
   .add-product__button {

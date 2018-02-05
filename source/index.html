@@ -3,38 +3,11 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.min.css">
-  <!-- Pixel Glass -->
-  <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      /* Mobile layout by default */
-      background-image: url("img/preview/cat-energy-index-mobile.jpg");
-    }
-
-    /* Tablet */
-
-    @media ( min-width: 768px) {
-      HTML {
-        /* Tablet layout */
-        background-image: url("img/preview/cat-energy-index-tablet.jpg");
-      }
-    }
-
-    /* Desktop */
-
-    @media ( min-width: 1300px) {
-      HTML {
-        /* Desktop layout */
-        background-image: url("img/preview/cat-energy-index-desktop.jpg");
-      }
-    }
-  </style>
-  <link href="js/pixel-glass/styles.css" rel="stylesheet">
-  <script src="js/pixel-glass/script.js"></script>
-  <!-- // Pixel Glass -->
 </head>
 
 <body>
@@ -47,11 +20,18 @@
     <div class="container">
       <div class="header__wrapper header__wrapper--nojs">
         <div class="header__top">
-          <svg class="header__logo header__logo--mobile" width="35" height="40">
-            <use xlink:href="#icon-logo-mobile"></use>
-          </svg>
-          <img class="header__logo header__logo--tablet" src="img/logo-tablet.png" alt="logo" width="173" height="58">
-          <img class="header__logo header__logo--desktop" src="img/logo-desktop.png" alt="logo" width="202" height="59">
+          <a class="header__link" href="index.html">
+            <h3 class="visually-hidden">Cat Energy</h3>
+            <svg class="header__logo header__logo--mobile" width="35" height="40">
+              <use xlink:href="#icon-logo-mobile"></use>
+            </svg>
+            <svg class="header__logo header__logo--tablet" width="173" height="58">
+              <use xlink:href="#logo-tablet"></use>
+            </svg>
+            <svg class="header__logo header__logo--desktop" width="202" height="59">
+              <use xlink:href="#logo-desktop"></use>
+            </svg>
+          </a>
           <svg class="header__title-logo" width="103" height="20">
             <use xlink:href="#logo-mobile-header"></use>
           </svg>
@@ -90,6 +70,7 @@
   <main>
 
     <section class="head-block">
+      <h1 class="visually-hidden">Cat Energy</h1>
       <div class="container">
         <div class="head-block__wrapper">
           <h2 class="head-block__title">Функциональное питание для котов</h2>
@@ -105,6 +86,7 @@
     </section>
 
     <section class="programs-list">
+      <h2 class="visually-hidden">Список программ</h2>
       <div class="container">
         <div class="programs-list__wrapper">
 
@@ -122,8 +104,8 @@
               <div class="program__foot">
                 <a href="#" class="program__link">
                   <h3 class="program__catalog">Каталог Slim</h3>
-                  <svg class="program__arrow" width="24" height="11">
-                    <use xlink:href="#icon-right-arrow-long"></use>
+                  <svg class="program__arrow" width="29" height="14">
+                    <use xlink:href="#icon-right-arrow-verylong"></use>
                   </svg>
                 </a>
               </div>
@@ -144,8 +126,8 @@
               <div class="program__foot">
                 <a href="#" class="program__link">
                   <h3 class="program__catalog">Каталог pro</h3>
-                  <svg class="program__arrow" width="24" height="11">
-                    <use xlink:href="#icon-right-arrow-long"></use>
+                  <svg class="program__arrow" width="29" height="14">
+                    <use xlink:href="#icon-right-arrow-verylong"></use>
                   </svg>
                 </a>
               </div>
@@ -160,30 +142,34 @@
       <div class="container">
         <h2 class="instruction__title">Как это работает</h2>
         <ul class="instruction__list">
-          <li class="instruction__item">
+          <li class="instruction__item instruction__item--1">
             <div class="instruction__illustration">
-              <img class="instruction__image" src="img/advantage-leaf@1x.png" alt="leaf" width="50" height="50">
+              <img class="instruction__image" src="img/advantage-leaf@1x.png" srcset="img/advantage-leaf@2x.png 2x" alt="leaf" width="50"
+                height="50">
             </div>
             <p class="instruction__text">
               Функциональное питание содержит только полезные питательные вещества.</p>
           </li>
-          <li class="instruction__item">
+          <li class="instruction__item instruction__item--2">
             <div class="instruction__illustration">
-              <img class="instruction__image" src="img/advantage-powder@1x.png" alt="powder" width="50" height="50">
+              <img class="instruction__image" src="img/advantage-powder@1x.png" srcset="img/advantage-powder@2x.png 2x" alt="powder" width="50"
+                height="50">
             </div>
             <p class="instruction__text">
               Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
           </li>
-          <li class="instruction__item">
+          <li class="instruction__item instruction__item--3">
             <div class="instruction__illustration">
-              <img class="instruction__image" src="img/advantage-dining@1x.png" alt="dining" width="50" height="50">
+              <img class="instruction__image" src="img/advantage-dining@1x.png" srcset="img/advantage-dining@2x.png 2x" alt="dining" width="50"
+                height="50">
             </div>
             <p class="instruction__text">
               Замените один-два приема обычной еды на наше фунцкциональное питание.</p>
           </li>
-          <li class="instruction__item">
+          <li class="instruction__item instruction__item--4">
             <div class="instruction__illustration">
-              <img class="instruction__image" src="img/advantage-clock@1x.png" alt="clock" width="50" height="50">
+              <img class="instruction__image" src="img/advantage-clock@1x.png" srcset="img/advantage-clock@2x.png 2x" alt="clock" width="50"
+                height="50">
             </div>
             <p class="instruction__text">
               Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
@@ -255,14 +241,18 @@
     <div class="container">
       <div class="footer__wrapper">
         <div class="footer__block footer__block--logo">
-          <svg class="footer__logo" width="130" height="25">
-            <use xlink:href="#logo-footer"></use>
-          </svg>
+          <a href="index.html" class="footer__logo-link">
+            <h3 class="visually-hidden">Cat Energy</h3>
+            <svg class="footer__logo" width="130" height="25">
+              <use xlink:href="#logo-footer"></use>
+            </svg>
+          </a>
         </div>
         <div class="footer__block footer__block--social">
           <ul class="footer__list social-list">
             <li class="social-list__item">
               <a href="" class="social-list__link">
+                <h3 class="visually-hidden">Мы Вконтакте</h3>
                 <svg class="social-list__icon social-list__icon--vk" width="22" height="12">
                   <use xlink:href="#icon-vk-mobile"></use>
                 </svg>
@@ -270,6 +260,7 @@
             </li>
             <li class="social-list__item">
               <a href="" class="social-list__link">
+                <h3 class="visually-hidden">Мы в Инстаграме</h3>
                 <svg class="social-list__icon social-list__icon--inst" width="16" height="16">
                   <use xlink:href="#icon-insta-mobile"></use>
                 </svg>
@@ -277,6 +268,7 @@
             </li>
             <li class="social-list__item">
               <a href="" class="social-list__link">
+                <h3 class="visually-hidden">Мы в Фейсбуке</h3>
                 <svg class="social-list__icon social-list__icon--fb" width="10" height="19">
                   <use xlink:href="#icon-fb-mobile"></use>
                 </svg>
@@ -285,40 +277,81 @@
           </ul>
         </div>
         <div class="footer__block footer__block--copyright">
-          <h3 class="footer__developer">HTML Academy</h3>
-          <svg class="footer__developer-icon" width="27" height="34">
-            <use xlink:href="#logo-htmlacademy"></use>
-          </svg>
+          <a class="footer__developer-link" href="https://htmlacademy.ru/intensive/adaptive">
+            <h3 class="footer__developer">HTML Academy</h3>
+            <svg class="footer__developer-icon" width="27" height="34">
+              <use xlink:href="#logo-htmlacademy"></use>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
   </footer>
 
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
-  </script>
-  <script type="text/javascript">
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <script>
     ymaps.ready(init);
     var myMap;
 
     function init() {
-      myMap = new ymaps.Map("map", {
-        center: [59.938631, 30.323055],
-        zoom: 17
-      });
+      if (document.body.clientWidth < 768) {
+        myMap = new ymaps.Map("map", {
+          center: [59.938631, 30.323055],
+          zoom: 17
+        });
 
-      var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
-        iconLayout: 'default#image',
-        iconImageHref: 'img/map-pin.png',
-        iconImageSize: [45, 53],
-        iconImageOffset: [-23, -53]
-      });
+        myMap.behaviors.disable('scrollZoom');
 
-      myMap.geoObjects.add(myPlacemark);
+        var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
+          iconLayout: 'default#image',
+          iconImageHref: 'img/map-pin.png',
+          iconImageSize: [72, 53],
+          iconImageOffset: [-36, -53]
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+      } else if (document.body.clientWidth >= 768 && document.body.clientWidth < 1300) {
+        myMap = new ymaps.Map("map", {
+          center: [59.938631, 30.323055],
+          zoom: 17
+        });
+
+        myMap.behaviors.disable('scrollZoom');
+
+        var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
+          iconLayout: 'default#image',
+          iconImageHref: 'img/map-pin.png',
+          iconImageSize: [72, 53],
+          iconImageOffset: [-36, -53]
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+      } else if (document.body.clientWidth >= 1300) {
+        myMap = new ymaps.Map("map", {
+          center: [59.938963, 30.319293],
+          zoom: 17
+        });
+
+        myMap.behaviors.disable('scrollZoom');
+
+        var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
+          iconLayout: 'default#image',
+          iconImageHref: 'img/map-pin.png',
+          iconImageSize: [124, 106],
+          iconImageOffset: [-72, -106]
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+      }
     }
+
   </script>
   <script src="js/picturefill.min.js"></script>
   <script src="js/svg4everybody.min.js"></script>
-  <script>svg4everybody(); // run it now or whenever you are ready</script>
+  <script>
+    svg4everybody(); // run it now or whenever you are ready
+
+  </script>
   <script src="js/toggle.js"></script>
 
 </body>

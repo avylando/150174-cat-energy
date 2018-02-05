@@ -64,6 +64,7 @@ gulp.task("clean", function() {
 
 gulp.task("copy", function() {
   return gulp.src([
+    "source/css/normalize.css",
     "source/img/**/*",
     "source/fonts/**/*.{woff,woff2}",
     "source/js/**/*.js"

@@ -39,7 +39,12 @@
   height: 360px;
   background-image: url("../img/map-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 320px 360px;
+  background-position: center 0;
+
+  @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
+    background-image: url("../img/map-mobile@2x.jpg");
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -67,6 +72,12 @@
 
   .cooperation__map {
     height: 396px;
+    background-image: url("../img/map-tablet@1x.jpg");
+    background-size: 768px 396px;
+
+    @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
+      background-image: url("../img/map-tablet@2x.jpg");
+    }
   }
 }
 
@@ -95,5 +106,12 @@
 
   .cooperation__map {
     height: 399px;
+
+    background-image: url("../img/map-desktop@1x.jpg");
+    background-size: 1300px 399px;
+
+    @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
+      background-image: url("../img/map-desktop@2x.jpg");
+    }
   }
 }

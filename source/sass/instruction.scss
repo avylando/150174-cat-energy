@@ -40,8 +40,8 @@
 
 @media (min-width: $tablet-width) {
   .instruction {
-    padding-top: 47px;
-    padding-bottom: 46px;
+    padding-top: 17px;
+    padding-bottom: 49px;
   }
 
   .instruction__title {
@@ -102,7 +102,7 @@
     &--4 {
       background-image: url("../img/4@1x.png");
       background-size: 121px 228px;
-      background-position: right 0;
+      background-position: 124px 0;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/4@2x.png");
@@ -134,5 +134,9 @@
   .instruction__item {
     width: 245px;
     margin-bottom: 0;
+
+    &--4 {
+      background-position: right 0;
+    }
   }
 }

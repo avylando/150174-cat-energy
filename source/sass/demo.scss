@@ -15,7 +15,7 @@
   font-family: "Arial", sans-serif;
   width: 95%;
   margin-top: 0;
-  margin-bottom: 24px;
+  margin-bottom: 23px;
 }
 
 .demo__stats-list {
@@ -113,12 +113,6 @@
   }
 }
 
-// .demo__image {
-//   display: block;
-//   width: 280px;
-//   margin: 0 auto;
-// }
-
 .demo__progress {
   padding-bottom: 3px;
   overflow: hidden;
@@ -210,7 +204,7 @@
 
   .demo__text {
     width: 97%;
-    margin-bottom: 52px;
+    margin-bottom: 51px;
   }
 
   .demo__stats {
@@ -264,7 +258,7 @@
   }
 
   .demo__progress {
-    margin-top: 80px;
+    margin-top: 81px;
 
     .demo__progress-toggle {
       transform: translateX(-50%);
@@ -355,6 +349,15 @@
       border-radius: 50%;
       background-color: $firmcolor;
     }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 5px 5px 0 #d6d6d6;
+    }
+
+    &:active {
+      border-color: $firmcolor;
+    }
   }
 
   .demo__progress-button {
@@ -363,6 +366,16 @@
     width: auto;
     padding: 7px 0;
     border-bottom: 1px dotted #bebebe;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      border-bottom-style: solid;
+    }
+
+    &:active {
+      border-bottom-color: transparent;
+    }
   }
 }
 

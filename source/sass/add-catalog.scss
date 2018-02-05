@@ -42,8 +42,13 @@
   padding-bottom: 44px;
   margin-top: 39px;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
-  background-size: 100% 100%;
+  background-size: 280px 289px;
+  background-position: center center;
   background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
 }
 
 .add-catalog__icon-gift {
@@ -56,13 +61,13 @@
   line-height: 1.2em;
   color: #ffffff;
   text-align: center;
-  width: 60%;
+  width: 160px;
   margin: 60px auto 0;
 }
 
 @media (min-width: $tablet-width) {
   .add-catalog {
-    padding-bottom: 80px;
+    padding-bottom: 76px;
     margin-top: -25px;
     overflow-x: hidden;
   }
@@ -92,22 +97,30 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 90px;
-    padding-right: 100px;
-    padding-top: 62px;
-    padding-bottom: 74px;
+    padding-left: 91px;
+    padding-right: 110px;
+    padding-top: 65px;
+    padding-bottom: 71px;
     margin-top: 69px;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    background-size: 708px 200px;
+
+    @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+    }
   }
 
   .add-catalog__promo-text {
     text-align: left;
     width: 175px;
     margin: 0;
+    margin-top: 7px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .add-catalog {
+    padding-bottom: 86px;
     margin-top: -15px;
   }
 
@@ -137,10 +150,21 @@
   .add-catalog__promo {
     flex-direction: column;
     width: 245px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 65px;
+    padding-bottom: 46px;
     margin-top: 0;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    background-size: 245px 289px;
+
+    @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+    }
   }
 
   .add-catalog__promo-text {
     text-align: center;
+    margin-right: -12px;
   }
 }

@@ -3,38 +3,10 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Кэт энерджи: Подбор программы</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <!-- Pixel Glass -->
-  <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      /* Mobile layout by default */
-      background-image: url("img/preview/cat-energy-form-mobile.jpg");
-    }
-
-    /* Tablet */
-
-    @media ( min-width: 768px) {
-      HTML {
-        /* Tablet layout */
-        background-image: url("img/preview/cat-energy-form-tablet.jpg");
-      }
-    }
-
-    /* Desktop */
-
-    @media ( min-width: 1300px) {
-      HTML {
-        /* Desktop layout */
-        background-image: url("img/preview/cat-energy-form-desktop.jpg");
-      }
-    }
-  </style>
-  <link href="js/pixel-glass/styles.css" rel="stylesheet">
-  <script src="js/pixel-glass/script.js"></script>
-  <!-- // Pixel Glass -->
 </head>
 
 <body>
@@ -143,14 +115,14 @@
               <div class="fields__inner">
                 <div class="fields__block">
                   <label for="email" class="fields__label">E-mail:*</label>
-                  <input type="text" class="fields__textfield" id="email" name="email" placeholder="kuklachev@gmail.com">
+                  <input type="email" class="fields__textfield" id="email" name="email" placeholder="kuklachev@gmail.com">
                   <svg class="fields__contact-icon fields__contact-icon--mail" width="17" height="13">
                     <use xlink:href="#icon-mail"></use>
                   </svg>
                 </div>
                 <div class="fields__block">
                   <label for="phone" class="fields__label">Телефон:*</label>
-                  <input type="text" class="fields__textfield" id="phone" name="phone" placeholder="8 (960) 900-60-90">
+                  <input type="tel" class="fields__textfield" id="phone" name="phone" placeholder="8 (960) 900-60-90">
                   <svg class="fields__contact-icon fields__contact-icon--phone" width="21" height="20">
                     <use xlink:href="#icon-phone"></use>
                   </svg>
@@ -169,7 +141,7 @@
               </div>
               <ul class="fields__list add-list">
                 <li class="add-list__item">
-                  <input type="checkbox" class="add-list__input" name="sweetener" id="sweetener">
+                  <input type="checkbox" class="add-list__input" name="sweetener" id="sweetener" checked>
                   <label for="sweetener" class="add-list__label">Сахарозаменитель</label>
                 </li>
                 <li class="add-list__item">
@@ -216,9 +188,11 @@
     <div class="container">
       <div class="footer__wrapper">
         <div class="footer__block footer__block--logo">
-          <svg class="footer__logo" width="130" height="25">
-            <use xlink:href="#logo-footer"></use>
-          </svg>
+          <a href="index.html" class="footer__logo-link">
+            <svg class="footer__logo" width="130" height="25">
+              <use xlink:href="#logo-footer"></use>
+            </svg>
+          </a>
         </div>
         <div class="footer__block footer__block--social">
           <ul class="footer__list social-list">
@@ -246,10 +220,12 @@
           </ul>
         </div>
         <div class="footer__block footer__block--copyright">
-          <h3 class="footer__developer">HTML Academy</h3>
-          <svg class="footer__developer-icon" width="27" height="34">
-            <use xlink:href="#logo-htmlacademy"></use>
-          </svg>
+          <a class="footer__developer-link" href="https://htmlacademy.ru/intensive/adaptive">
+            <h3 class="footer__developer">HTML Academy</h3>
+            <svg class="footer__developer-icon" width="27" height="34">
+              <use xlink:href="#logo-htmlacademy"></use>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
@@ -262,19 +238,55 @@
     var myMap;
 
     function init() {
-      myMap = new ymaps.Map("map", {
-        center: [59.938631, 30.323055],
-        zoom: 17
-      });
+      if (document.body.clientWidth < 768) {
+        myMap = new ymaps.Map("map", {
+          center: [59.938631, 30.323055],
+          zoom: 17
+        });
 
-      var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
-        iconLayout: 'default#image',
-        iconImageHref: 'img/map-pin.png',
-        iconImageSize: [45, 53],
-        iconImageOffset: [-23, -53]
-      });
+        myMap.behaviors.disable('scrollZoom');
 
-      myMap.geoObjects.add(myPlacemark);
+        var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
+          iconLayout: 'default#image',
+          iconImageHref: 'img/map-pin.png',
+          iconImageSize: [72, 53],
+          iconImageOffset: [-36, -53]
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+      } else if (document.body.clientWidth >= 768 && document.body.clientWidth < 1300) {
+        myMap = new ymaps.Map("map", {
+          center: [59.938631, 30.323055],
+          zoom: 17
+        });
+
+        myMap.behaviors.disable('scrollZoom');
+
+        var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
+          iconLayout: 'default#image',
+          iconImageHref: 'img/map-pin.png',
+          iconImageSize: [72, 53],
+          iconImageOffset: [-36, -53]
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+      } else if (document.body.clientWidth >= 1300) {
+        myMap = new ymaps.Map("map", {
+          center: [59.938963, 30.319293],
+          zoom: 17
+        });
+
+        myMap.behaviors.disable('scrollZoom');
+
+        var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
+          iconLayout: 'default#image',
+          iconImageHref: 'img/map-pin.png',
+          iconImageSize: [124, 106],
+          iconImageOffset: [-72, -106]
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+      }
     }
   </script>
   <script src="js/picturefill.min.js"></script>

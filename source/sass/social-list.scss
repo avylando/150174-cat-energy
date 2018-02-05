@@ -19,6 +19,15 @@
 .social-list__link {
   display: inline-block;
   vertical-align: top;
+
+  &:hover > .social-list__icon,
+  &:focus > .social-list__icon {
+    fill: $firmcolor;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .social-list__icon {
@@ -47,6 +56,15 @@
       height: 28px;
       margin-top: -5px;
       margin-left: -14px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .social-list__icon {
+    &--fb {
+      margin-top: 0;
+      margin-left: -15px;
     }
   }
 }

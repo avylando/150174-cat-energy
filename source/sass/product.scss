@@ -65,7 +65,7 @@
     padding-right: 37px;
     margin-left: 0;
     margin-right: 0;
-    background-image: linear-gradient(to bottom, transparent 0, transparent 81px, $bg-grey 81px, $bg-grey 100%);
+    background-image: linear-gradient(to bottom, transparent 0, transparent 77px, $bg-grey 77px, $bg-grey 100%);
 
     &:nth-child(odd) {
       margin-right: 60px;
@@ -89,10 +89,12 @@
   .product__image {
     &--small {
       width: 161px;
+      margin-left: 2px;
     }
 
     &--big {
       width: 195px;
+      margin-left: 6px;
     }
   }
 

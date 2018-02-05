@@ -126,7 +126,6 @@
 
   .product__button {
     padding-top: 10px;
-
   }
 }
 
@@ -135,7 +134,7 @@
     @include pad-set(20px);
 
     margin-right: 80px;
-    background-image: linear-gradient(to bottom, transparent 0, transparent 75px, $bg-grey 75px,$bg-grey 100%);
+    background-image: linear-gradient(to bottom, transparent 0, transparent 75px, $bg-grey 75px, $bg-grey 100%);
 
     &:nth-child(odd) {
       margin-right: 80px;

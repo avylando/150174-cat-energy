@@ -56,13 +56,13 @@
   }
 
   .cooperation__title {
-    width: 30%;
+    width: 160px;
     font-size: 20px;
     line-height: 25px;
   }
 
   .cooperation__adress {
-    width: 30%;
+    width: 170px;
     text-align: right;
   }
 
@@ -99,8 +99,11 @@
     @include pad-set(35px);
   }
 
+  .cooperation__title {
+    margin-top: 5px;
+  }
+
   .cooperation__adress {
-    width: 40%;
     text-align: left;
   }
 

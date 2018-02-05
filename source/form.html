@@ -20,6 +20,7 @@
       <div class="header__wrapper header__wrapper--nojs">
         <div class="header__top">
           <a class="header__link" href="index.html">
+            <h3 class="visually-hidden">Cat Energy</h3>
             <svg class="header__logo header__logo--mobile" width="35" height="40">
               <use xlink:href="#icon-logo-mobile"></use>
             </svg>
@@ -189,6 +190,7 @@
       <div class="footer__wrapper">
         <div class="footer__block footer__block--logo">
           <a href="index.html" class="footer__logo-link">
+            <h3 class="visually-hidden">Cat Energy</h3>
             <svg class="footer__logo" width="130" height="25">
               <use xlink:href="#logo-footer"></use>
             </svg>
@@ -198,6 +200,7 @@
           <ul class="footer__list social-list">
             <li class="social-list__item">
               <a href="" class="social-list__link">
+                <h3 class="visually-hidden">Мы Вконтакте</h3>
                 <svg class="social-list__icon social-list__icon--vk" width="22" height="12">
                   <use xlink:href="#icon-vk-mobile"></use>
                 </svg>
@@ -205,6 +208,7 @@
             </li>
             <li class="social-list__item">
               <a href="" class="social-list__link">
+                <h3 class="visually-hidden">Мы в Инстаграме</h3>
                 <svg class="social-list__icon social-list__icon--inst" width="16" height="16">
                   <use xlink:href="#icon-insta-mobile"></use>
                 </svg>
@@ -212,6 +216,7 @@
             </li>
             <li class="social-list__item">
               <a href="" class="social-list__link">
+                <h3 class="visually-hidden">Мы в Фейсбуке</h3>
                 <svg class="social-list__icon social-list__icon--fb" width="10" height="19">
                   <use xlink:href="#icon-fb-mobile"></use>
                 </svg>
@@ -231,9 +236,11 @@
     </div>
   </footer>
 
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU">
+
+
   </script>
-  <script type="text/javascript">
+  <script>
     ymaps.ready(init);
     var myMap;
 
@@ -288,10 +295,14 @@
         myMap.geoObjects.add(myPlacemark);
       }
     }
+
   </script>
   <script src="js/picturefill.min.js"></script>
   <script src="js/svg4everybody.min.js"></script>
-  <script>svg4everybody(); // run it now or whenever you are ready</script>
+  <script>
+    svg4everybody(); // run it now or whenever you are ready
+
+  </script>
   <script src="js/toggle.js"></script>
 
 </body>

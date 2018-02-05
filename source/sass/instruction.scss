@@ -23,13 +23,11 @@
 
 .instruction__illustration {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 60px;
   height: 60px;
   background-color: $firmcolor;
-}
-
-.instruction__image {
-  margin: auto;
 }
 
 .instruction__text {
@@ -65,6 +63,7 @@
     flex-wrap: wrap;
     align-items: flex-start;
     width: 40%;
+    max-width: 300px;
     padding-bottom: 50px;
     margin-bottom: 83px;
     background-repeat: no-repeat;
@@ -117,7 +116,7 @@
   }
 
   .instruction__text {
-    width: 100%;
+    width: 255px;
   }
 }
 

@@ -39,57 +39,29 @@
       }
     })
 
-    // if (docWidth >= tabletWidth) {
-    //   var imgBefore = progress.querySelector('.demo__illustration--before');
-    //   var scale = progress.querySelector('.demo__progress-bar');
-    //   var toggle = scale.querySelector('.demo__progress-toggle');
+    if (docWidth >= tabletWidth) {
+      var imgBefore = progress.querySelector('.demo__illustration--before');
+      var imgAfter = progress.querySelector('.demo__illustration--after');
+      var scale = progress.querySelector('.demo__progress-bar');
+      var range = scale.querySelector('.demo__range');
 
-    //   var scaleWidth = 427;
-    //   var percentScale = 4.27;
-    //   var minScaleValue = 0;
-    //   var maxScaleValue = 100;
+      range.addEventListener('input', function() {
+        imgBefore.style.width = (100 - range.value) + '%';
+        imgAfter.style.width = range.value + '%';
+      })
 
-    //   toggle.addEventListener('mousedown', function (evt) {
-    //     evt.preventDefault();
+      btnBefore.addEventListener('click', function () {
+        imgBefore.style.width = '100%';
+        imgAfter.style.width = '0%';
+        range.value = 0;
+      })
 
-    //     var startCoords = {
-    //       x: evt.clientX
-    //     }
-
-    //     var pinMouseMoveHandler = function (moveEvt) {
-    //       moveEvt.preventDefault();
-
-    //       var shift = {
-    //         x: startCoords.x - moveEvt.clientX
-    //       };
-
-    //       startCoords = {
-    //         x: moveEvt.clientX
-    //       };
-
-    //       toggle.style.left = ((toggle.offsetLeft - shift.x) / percentScale) + '%';
-    //       imgBefore.style.width = (100 - Math.floor((toggle.offsetLeft - shift.x) / percentScale)) + '%';
-
-    //       var toggleOffsetPercent = parseInt(toggle.style.left, 10);
-
-    //       if (toggleOffsetPercent <= minScaleValue) {
-    //         toggle.style.left = minScaleValue + '%';
-    //       } else if (toggleOffsetPercent >= maxScaleValue) {
-    //         toggle.style.left = maxScaleValue + '%';
-    //       }
-    //     }
-
-    //     var pinMouseUpHandler = function () {
-    //       document.removeEventListener('mousemove', pinMouseMoveHandler);
-    //       document.removeEventListener('mouseup', pinMouseUpHandler);
-    //     }
-
-    //     document.addEventListener('mousemove', pinMouseMoveHandler);
-    //     document.addEventListener('mouseup', pinMouseUpHandler);
-    //   })
-    // }
+      btnAfter.addEventListener('click', function () {
+        imgBefore.style.width = '0%';
+        imgAfter.style.width = '100%';
+        range.value = 100;
+      })
+    }
   }
-
-
 
 })();

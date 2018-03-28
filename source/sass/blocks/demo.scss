@@ -92,11 +92,12 @@
   width: 100%;
   height: 240px;
   background-repeat: no-repeat;
+  background-position-x: center;
 
   &--before {
     background-image: url("../img/before-mobile@1x.png");
-    background-size: 114% 100%;
-    background-position: -19px -6px;
+    // background-size: 114% 100%;
+    // background-position: -19px -6px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/before-mobile@2x.png");
@@ -105,7 +106,7 @@
 
   &--after {
     background-image: url("../img/after-mobile@1x.png");
-    background-position: -19px 0;
+    // background-position: -19px 0;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/after-mobile@2x.png");
@@ -176,6 +177,10 @@
   height: 6px;
   border-radius: 10px;
   background-color: $firmcolor;
+}
+
+.demo__range {
+  display: none;
 }
 
 @media (min-width: $tablet-width) {
@@ -278,7 +283,7 @@
   .demo__image-wrapper {
     position: relative;
     width: 610px;
-    height: 521px;
+    height: 465px;
     margin: 0 auto;
   }
 
@@ -286,29 +291,33 @@
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
+    width: 50%;
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: -33px 0;
 
     &--before {
-      width: 50%;
       z-index: 20;
-      background-image: url("../img/before-tablet@1x.png"), linear-gradient(to bottom, #ffffff 0, #ffffff 175px, $bg-grey 175px, $bg-grey 100%);
-
+      background-image: url("../img/before-tablet@1x.png");
+      background-position-x: -25px;
+      background-position-y: 4px;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/before-tablet@2x.png"), linear-gradient(to bottom, #ffffff 0, #ffffff 175px, $bg-grey 175px, $bg-grey 100%);
+        background-image: url("../img/before-tablet@2x.png");
       }
     }
 
     &--after {
+      direction: rtl;
+      left: auto;
+      right: 0;
       z-index: 10;
-      background-image: url("../img/after-tablet@1x.png"), linear-gradient(to bottom, #ffffff 0, #ffffff 175px, $bg-darkgrey  175px, $bg-darkgrey  100%);
+      background-image: url("../img/after-tablet@1x.png");
+      background-position-x: -11px;
+      transform: scaleX(-1);
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/after-tablet@2x.png"), linear-gradient(to bottom, #ffffff 0, #ffffff 175px, $bg-darkgrey  175px, $bg-darkgrey 100%);
+        background-image: url("../img/after-tablet@2x.png");
       }
     }
   }
@@ -319,11 +328,67 @@
   }
 
   .demo__progress-bar {
-    position: relative;
     width: 427px;
-    height: 6px;
+    height: 35px;
     border: none;
+    background-color: transparent;
+    transform: translate(4px, 11px);
+  }
+
+  .demo__progress-toggle {
+    display: none;
+  }
+
+  .demo__range {
+    display: block;
+    width: 100%;
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%;
+    height: 6px;
     background-color: #dcdcdc;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .demo__range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 34px;
+    height: 34px;
+    border: 1px solid #cecece;
+    border-radius: 50%;
+    box-shadow: 0 2px 2px 0 #d6d6d6;
+    background-color: #ffffff;
+    // cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $firmcolor;
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 5px 5px 0 #d6d6d6;
+    }
+
+    &:active {
+      border-color: $firmcolor;
+    }
+  }
+
+  .demo-slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
   }
 
   .demo__progress-toggle {
@@ -436,7 +501,7 @@
   }
 
   .demo__progress {
-    width: 610px;
+    width: 590px;
     margin-left: auto;
     margin-top: 0;
   }
@@ -446,23 +511,24 @@
   }
 
   .demo__illustration {
-    background-size: 690px 517px;
-    background-position: -41px 0;
+    // background-size: 690px 517px;
+    // background-position: -41px 0;
 
     &--before {
-      width: 53%;
-      background-image: url("../img/before-desktop@1x.png"), linear-gradient(to bottom, #ffffff 0, #ffffff 185px, $bg-grey 167px, $bg-grey 100%);
+      background-image: url("../img/before-desktop@1x.png");
+      background-position: -41px 0;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/before-desktop@2x.png"), linear-gradient(to bottom, #ffffff 0, #ffffff 185px, $bg-grey 167px, $bg-grey 100%);
+        background-image: url("../img/before-desktop@2x.png");
       }
     }
 
     &--after {
-      background-image: url("../img/after-desktop@1x.png"), linear-gradient(to bottom, #ffffff 0, #ffffff 185px, $bg-darkgrey  167px, $bg-darkgrey  100%);
+      background-image: url("../img/after-desktop@1x.png");
+      background-position: -59px 0;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/after-desktop@2x.png"), linear-gradient(to bottom, #ffffff 0, #ffffff 185px, $bg-darkgrey  167px, $bg-darkgrey  100%);
+        background-image: url("../img/after-desktop@2x.png");
       }
     }
   }
